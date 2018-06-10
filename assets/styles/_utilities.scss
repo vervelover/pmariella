@@ -1,0 +1,150 @@
+/* # Variables
+-----------------------------------------------------------------------*/
+
+/**
+ * ### Breakpoints
+ *
+ * Based on the most common 16:9 screen resolutions.
+ * @link https://pacoup.com/2011/06/12/list-of-true-169-resolutions/
+ */
+
+$breakpoints: (
+	xs: 32em,
+	sm: 48em,
+	md: 56em,
+	lg: 72em,
+	xl: 100em
+);
+
+/* ### Colors */
+
+/** palette here:
+http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
+
+$accent:  #b79449;
+$black:   #0a0804;
+$dark:    #181307;
+$gray:    #544d3e;
+$medium:  #544d3e;
+$border:  #cecece;
+$light:   #cecece;
+$white:   #ffffff;
+$overlay: rgba(0, 0, 0, .1);
+
+/* ### Typography */
+
+$font-heading: 'Muli', sans-serif;
+$font-body:    'Muli', sans-serif;
+$thin:		   300;
+$normal:  	   300;
+$bolder:  	   300;
+$bold:    	   300;
+
+/* ### Other */
+
+$site-radius:     2px;
+$site-border:     2px solid $border;
+$site-transition: 0.75s cubic-bezier(0, 1, 0.5, 1);
+
+/* ### Column widths */
+
+$margin-left:   .2rem;
+
+$one-half :     calc((100% - #{$margin-left}) / 2);
+$one-third:     calc((100% - 2 * #{$margin-left}) / 3);
+$one-fourth:    calc((100% - 3 * #{$margin-left}) / 4);
+$one-fifth:     calc((100% - 4 * #{$margin-left}) / 5);
+$one-sixth:     calc((100% - 5 * #{$margin-left}) / 6);
+$two-thirds:    calc(2 * ((100% - 2 * #{$margin-left}) / 3) + #{$margin-left});
+$two-fifths:    38.4615384615384616%;
+$three-fourths: calc(3 * ((100% - 3 * #{$margin-left}) / 4) + 2 * #{$margin-left});
+$three-fifths:  58.9743589743589744%;
+$four-fifths:   79.4871794871794872%;
+$five-sixths:   82.90598290598291%;
+
+$woocommerce-columns: $one-fourth;
+
+
+/* # Mixins
+-----------------------------------------------------------------------*/
+
+/* ### Media Queries */
+
+@mixin breakpoint( $breakpoint ) {
+
+    @if map-has-key( $breakpoints, $breakpoint ) {
+
+        @media ( min-width: #{ map-get( $breakpoints, $breakpoint ) } ) {
+            @content;
+        }
+
+    } @else if type_of( $breakpoint ) == number and unit( $breakpoint ) == px or unit( $breakpoint ) == em or unit( $breakpoint ) == rem {
+
+        @media (min-width: $breakpoint ) {
+            @content;
+        }
+
+    } @else {
+
+        @warn "No value could be retrieved from `#{$breakpoint}`. "
+              + "Please make sure it is defined in `$breakpoints` map, or it is a valid number with supported unit of px, em or rem.";
+    }
+}
+
+/* ### Clearfix */
+
+@mixin clearfix {
+	clear: both;
+	&:before,
+	&:after {
+		clear: both;
+		display: block;
+		content: '';
+	}
+}
+
+/* ### Flexfix */
+
+@mixin flexfix {
+	&:before,
+	&:after {
+		position: absolute;
+	}
+}
+
+/* ### Transitions */
+
+@mixin transition {
+	-webkit-transition: all $site-transition;
+	-moz-transition: all $site-transition;
+	-o-transition: all $site-transition;
+	transition: all $site-transition;
+}
+
+/* ### Overlay */
+
+@mixin overlay {
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $overlay;
+		z-index: 1;
+		pointer-events: none;
+	}
+}
+
+/* ### Overlay */
+
+@mixin center {
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
