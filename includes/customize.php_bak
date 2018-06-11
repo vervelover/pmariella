@@ -181,33 +181,33 @@ function business_customizer_output() {
 	 * the theme customizer. If the theme mod is not equal to the
 	 * default color then the string is appended to $css.
 	 */
-	$css .= ( $business_colors['accent'] !== $accent ) ? sprintf( '
-
-		button.accent,
-		.button.accent,
-		button.accent:hover,
-		.button.accent:hover,
-		button.accent:focus,
-		.button.accent:focus,
-		.menu-item.button > a > span,
-		.archive-pagination a:hover,
-		.archive-pagination a:focus,
-		.archive-pagination .active a,
-		.pricing-table .featured .button,
-		.pricing-table .featured button,
-		.archive-pagination a:hover,
-		.archive-pagination .active a,
-		.front-page-3 .widget_custom_html:first-of-type hr,
-		.front-page-5 .widget_custom_html:first-of-type hr {
-			background-color: %1$s;
-		}
-
-		.front-page-2 .fa {
-			color: %1$s;
-		}
-
-		', $accent ) : '';
-
+	// $css .= ( $business_colors['accent'] !== $accent ) ? sprintf( '
+	//
+	// 	button.accent,
+	// 	.button.accent,
+	// 	button.accent:hover,
+	// 	.button.accent:hover,
+	// 	button.accent:focus,
+	// 	.button.accent:focus,
+	// 	.menu-item.button > a > span,
+	// 	.archive-pagination a:hover,
+	// 	.archive-pagination a:focus,
+	// 	.archive-pagination .active a,
+	// 	.pricing-table .featured .button,
+	// 	.pricing-table .featured button,
+	// 	.archive-pagination a:hover,
+	// 	.archive-pagination .active a,
+	// 	.front-page-3 .widget_custom_html:first-of-type hr,
+	// 	.front-page-5 .widget_custom_html:first-of-type hr {
+	// 		background-color: %1$s;
+	// 	}
+	//
+	// 	.front-page-2 .fa {
+	// 		color: %1$s;
+	// 	}
+	//
+	// 	', $accent ) : '';
+	//
 	$css .= ( $business_colors['overlay'] !== $overlay ) ? sprintf( '
 
 		.page-header:before,
@@ -217,59 +217,59 @@ function business_customizer_output() {
 		}
 
 		', $overlay ) : '';
-
-	$css .= ( 100 !== $logo_size ) ? sprintf( '
 	
+	$css .= ( 100 !== $logo_size ) ? sprintf( '
+
 		.wp-custom-logo .title-area {
 			max-width: %1$spx;
-		
+
 		}
 
 		', $logo_size ) : '';
 
 	// WooCommerce only styles.
-	if ( class_exists( 'WooCommerce' ) && business_is_woocommerce_page() ) {
-
-		$css .= ( $business_colors['accent'] !== $accent ) ? sprintf( '
-
-			.woocommerce a.button:hover,
-			.woocommerce a.button:focus,
-			.woocommerce a.button,
-			.woocommerce a.button.alt:hover,
-			.woocommerce a.button.alt:focus,
-			.woocommerce a.button.alt,
-			.woocommerce button.button:hover,
-			.woocommerce button.button:focus,
-			.woocommerce button.button,
-			.woocommerce button.button.alt:hover,
-			.woocommerce button.button.alt:focus,
-			.woocommerce button.button.alt,
-			.woocommerce input.button:hover,
-			.woocommerce input.button:focus,
-			.woocommerce input.button,
-			.woocommerce input.button.alt:hover,
-			.woocommerce input.button.alt:focus,
-			.woocommerce input.button.alt,
-			.woocommerce input[type="submit"]:hover,
-			.woocommerce input[type="submit"]:focus,
-			.woocommerce input[type="submit"],
-			.woocommerce #respond input#submit:hover,
-			.woocommerce #respond input#submit:focus,
-			.woocommerce #respond input#submit,
-			.woocommerce #respond input#submit.alt:hover,
-			.woocommerce #respond input#submit.alt:focus,
-			.woocommerce #respond input#submit.alt,
-			.woocommerce input.button[type=submit]:focus,
-			.woocommerce input.button[type=submit],
-			.woocommerce input.button[type=submit]:hover,
-			.woocommerce.widget_price_filter .ui-slidui-slider-handle,
-			.woocommerce.widget_price_filter .ui-slidui-slider-range {
-				background-color: %1$s;
-			}
-
-			', $accent ) : '';
-
-	}
+	// if ( class_exists( 'WooCommerce' ) && business_is_woocommerce_page() ) {
+	//
+	// 	$css .= ( $business_colors['accent'] !== $accent ) ? sprintf( '
+	//
+	// 		.woocommerce a.button:hover,
+	// 		.woocommerce a.button:focus,
+	// 		.woocommerce a.button,
+	// 		.woocommerce a.button.alt:hover,
+	// 		.woocommerce a.button.alt:focus,
+	// 		.woocommerce a.button.alt,
+	// 		.woocommerce button.button:hover,
+	// 		.woocommerce button.button:focus,
+	// 		.woocommerce button.button,
+	// 		.woocommerce button.button.alt:hover,
+	// 		.woocommerce button.button.alt:focus,
+	// 		.woocommerce button.button.alt,
+	// 		.woocommerce input.button:hover,
+	// 		.woocommerce input.button:focus,
+	// 		.woocommerce input.button,
+	// 		.woocommerce input.button.alt:hover,
+	// 		.woocommerce input.button.alt:focus,
+	// 		.woocommerce input.button.alt,
+	// 		.woocommerce input[type="submit"]:hover,
+	// 		.woocommerce input[type="submit"]:focus,
+	// 		.woocommerce input[type="submit"],
+	// 		.woocommerce #respond input#submit:hover,
+	// 		.woocommerce #respond input#submit:focus,
+	// 		.woocommerce #respond input#submit,
+	// 		.woocommerce #respond input#submit.alt:hover,
+	// 		.woocommerce #respond input#submit.alt:focus,
+	// 		.woocommerce #respond input#submit.alt,
+	// 		.woocommerce input.button[type=submit]:focus,
+	// 		.woocommerce input.button[type=submit],
+	// 		.woocommerce input.button[type=submit]:hover,
+	// 		.woocommerce.widget_price_filter .ui-slidui-slider-handle,
+	// 		.woocommerce.widget_price_filter .ui-slidui-slider-range {
+	// 			background-color: %1$s;
+	// 		}
+	//
+	// 		', $accent ) : '';
+	//
+	// }
 
 	// Style handle is the name of the theme.
 	$handle  = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';

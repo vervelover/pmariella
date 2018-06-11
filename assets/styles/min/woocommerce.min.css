@@ -8,7 +8,7 @@
  */
 /* ### Colors */
 /** palette here:
-http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
+http://paletton.com/palette.php?uid=25z0u0keag1SPfFm-0nn12T1pvF */
 /* ### Typography */
 /* ### Other */
 /* ### Column widths */
@@ -335,6 +335,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-page ul.products {
 	clear: both;
 	*zoom: 1;
+	/* da fare */
 }
 
 .woocommerce ul.products::before,
@@ -353,14 +354,12 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
 	box-shadow: none;
-	width: -webkit-calc((100% - 3 * 0.2rem) / 4);
-	width:         calc((100% - 3 * 0.2rem) / 4);
 }
 
-.woocommerce ul.products .entry:nth-of-type(3n + 1),
-.woocommerce-page ul.products .entry:nth-of-type(3n + 1) {
-	margin-left: 3.2px;
-	margin-left: 0.2rem;
+.woocommerce ul.products .entry,
+.woocommerce-page ul.products .entry {
+	margin-left: 64px;
+	margin-left: 4rem;
 }
 
 .woocommerce ul.products li.first,
@@ -735,6 +734,11 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	width: 68%;
 }
 
+body .woocommerce ul.products[class*='columns-'] li.product,
+.woocommerce-page ul.products[class*='columns-'] li.product {
+	width: 100%;
+}
+
 /**
  * Twenty Eleven specific styles
  */
@@ -842,8 +846,8 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce span.onsale {
 	position: absolute;
-	background-color: #181307;
-	border-radius: 2px;
+	background-color: #160608;
+	border-radius: 0.5rem;
 	font-weight: 400;
 	font-size: 22.4px;
 	font-size: 1.4rem;
@@ -870,7 +874,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	left: 0.1em;
 	top: -webkit-calc(2em - 0.38em);
 	top:         calc(2em - 0.38em);
-	border-radius: 2px;
+	border-radius: 0.5rem;
 }
 
 .woocommerce .woocommerce-LoopProduct-link {
@@ -883,7 +887,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	float: right;
 	padding: 0 0 0 16px;
 	padding: 0 0 0 1rem;
-	color: #181307;
+	color: #160608;
 	font-size: 32px;
 	font-size: 2rem;
 }
@@ -899,11 +903,11 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .cart-count {
-	font-family: 'Hind', Helvetica, Arial, sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-size: 19.2px;
 	font-size: 1.2rem;
 	font-weight: 400;
-	background-color: #b79449;
+	background-color: #466b3c;
 	color: #ffffff;
 	height: 14px;
 	width: 14px;
@@ -935,6 +939,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce .woocommerce-ordering {
+	display: none;
 	width: auto;
 	float: left;
 	clear: both;
@@ -956,7 +961,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce a.added_to_cart {
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 22.4px;
 	font-size: 1.4rem;
 	padding-top: 16px;
@@ -970,6 +975,11 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce input.button.loading::after,
 .woocommerce #respond input#submit.loading::after {
 	top: 1em;
+}
+
+.woocommerce ul.products {
+	margin: 0 auto;
+	max-width: 72em;
 }
 
 .woocommerce ul.products li.product {
@@ -991,13 +1001,13 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	box-shadow: none;
 	text-align: center;
 	background-color: #ffffff;
-	box-shadow: 0 1rem 2rem -1rem rgba(24, 19, 7, 0.1);
+	box-shadow: 0 1rem 2rem -1rem rgba(22, 6, 8, 0.1);
 	padding-bottom: 40px;
 	padding-bottom: 2.5rem;
 }
 
 .woocommerce ul.products li.product:hover {
-	box-shadow: 0 2rem 2rem -1rem rgba(24, 19, 7, 0.1);
+	box-shadow: 0 2rem 2rem -1rem rgba(22, 6, 8, 0.1);
 }
 
 .woocommerce ul.products li.product:before,
@@ -1016,7 +1026,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce ul.products li.product img {
 	margin-bottom: 0 !important;
-	border-radius: 2px 2px 0 0;
+	border-radius: 0.5rem 0.5rem 0 0;
 	-webkit-transition: all ease-in-out 0.2s;
 	        transition: all ease-in-out 0.2s;
 }
@@ -1037,7 +1047,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	clear: both;
 	float: none;
 	background-color: #ffffff;
-	color: #181307;
+	color: #160608;
 	margin-bottom: 0;
 }
 
@@ -1091,7 +1101,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce .woocommerce-pagination .page-numbers {
 	border: none;
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-family: 'Lobster Two', cursive;
 	font-size: 24px;
 	font-size: 1.5rem;
 }
@@ -1108,7 +1118,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	padding: 11.2px;
 	padding: 0.7rem;
 	text-decoration: none;
-	border-radius: 2px;
+	border-radius: 0.5rem;
 	margin: 0 0.1em;
 	width: 48px;
 	width: 3rem;
@@ -1122,7 +1132,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce .woocommerce-pagination .page-numbers a:hover,
 .woocommerce .woocommerce-pagination .page-numbers .active a {
-	background-color: #b79449;
+	background-color: #466b3c;
 	color: #ffffff;
 }
 
@@ -1136,18 +1146,18 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce div.product .summary p {
-	color: #544d3e;
+	color: #7a444b;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
 }
 
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-family: 'Lobster Two', cursive;
 	font-size: 2em;
 	margin-bottom: 16px;
 	margin-bottom: 1rem;
-	color: #b79449;
+	color: #466b3c;
 	line-height: 1.5;
 	float: left;
 	width: 100%;
@@ -1156,7 +1166,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce div.product .product_meta {
 	font-size: 24px;
 	font-size: 1.5rem;
-	color: #544d3e;
+	color: #7a444b;
 }
 
 .woocommerce div.product form.cart {
@@ -1200,16 +1210,16 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
-	border: 1px solid #cecece;
+	border: 1px solid #7a444b;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-	border: 2px solid #cecece;
+	border: 2px solid #7a444b;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-	background-color: #cecece;
-	border-radius: 2px;
+	background-color: #f2e7e9;
+	border-radius: 0.5rem;
 	padding: 0;
 }
 
@@ -1219,7 +1229,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-	color: #181307;
+	color: #160608;
 	padding: 0.5em 1em;
 	font-weight: 400;
 	font-size: 25.6px;
@@ -1228,7 +1238,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-	color: #b79449;
+	color: #466b3c;
 }
 
 /* Two Sidebar Layouts */
@@ -1250,13 +1260,13 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .content-sidebar-sidebar.woocommerce div.product .woocommerce-tabs ul.tabs li:last-child,
 .sidebar-content-sidebar.woocommerce div.product .woocommerce-tabs ul.tabs li:last-child,
 .sidebar-sidebar-content.woocommerce div.product .woocommerce-tabs ul.tabs li:last-child {
-	border-bottom: 2px solid #cecece;
+	border-bottom: 2px solid #7a444b;
 }
 
 .content-sidebar-sidebar.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
 .sidebar-content-sidebar.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
 .sidebar-sidebar-content.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-	border-bottom-color: #cecece;
+	border-bottom-color: #f2e7e9;
 }
 
 .content-sidebar-sidebar.woocommerce div.product .woocommerce-tabs ul.tabs li.active a::after,
@@ -1281,7 +1291,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	height: auto;
 	line-height: 2;
 	max-width: 50%;
-	border-color: #cecece;
+	border-color: #7a444b;
 }
 
 .woocommerce-cart table.cart img,
@@ -1361,8 +1371,8 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-checkout #payment,
 #add_payment_method #payment {
 	background-color: #ffffff;
-	border-radius: 2px;
-	border: 2px solid #cecece;
+	border-radius: 0.5rem;
+	border: 2px solid #7a444b;
 	padding: 0;
 }
 
@@ -1375,7 +1385,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-cart #payment div.form-row.place-order,
 .woocommerce-checkout #payment div.form-row.place-order,
 #add_payment_method #payment div.form-row.place-order {
-	background-color: #cecece;
+	background-color: #f2e7e9;
 }
 
 .woocommerce-cart #payment div.form-row.place-order .button,
@@ -1389,7 +1399,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-cart #payment ul.payment_methods,
 .woocommerce-checkout #payment ul.payment_methods,
 #add_payment_method #payment ul.payment_methods {
-	border-color: #cecece;
+	border-color: #7a444b;
 	padding: 48px;
 	padding: 3rem;
 }
@@ -1403,9 +1413,9 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-cart #payment div.payment_box,
 .woocommerce-checkout #payment div.payment_box,
 #add_payment_method #payment div.payment_box {
-	background-color: #cecece;
-	border: 2px solid #cecece;
-	border-radius: 2px;
+	background-color: #f2e7e9;
+	border: 2px solid #7a444b;
+	border-radius: 0.5rem;
 }
 
 .woocommerce-cart #payment div.payment_box::before,
@@ -1416,7 +1426,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 /* ### WooCommerce Cart Page */
 .woocommerce table.shop_table {
-	border: 2px solid #cecece;
+	border: 2px solid #7a444b;
 	font-size: 28.8px;
 	font-size: 1.8rem;
 }
@@ -1424,8 +1434,8 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce table.shop_table,
 .woocommerce table.shop_table td {
 	border-width: 2px;
-	border-color: #cecece;
-	border-radius: 2px;
+	border-color: #7a444b;
+	border-radius: 0.5rem;
 	line-height: 1.75;
 	word-break: normal;
 }
@@ -1445,7 +1455,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce table.shop_table tfoot th,
 .woocommerce table.shop_table tfoot td {
 	border-width: 2px;
-	border-color: #cecece;
+	border-color: #7a444b;
 }
 
 .woocommerce-cart table.cart {
@@ -1482,7 +1492,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce-cart .cart-collaterals .cart_totals tr th,
 .woocommerce-cart .cart-collaterals .cart_totals tr td {
-	border-color: #cecece;
+	border-color: #7a444b;
 	border-width: 2px;
 }
 
@@ -1496,12 +1506,12 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce input.button,
 .woocommerce input[type='submit'],
 .woocommerce #respond input#submit {
-	background: #b79449;
+	background: #466b3c;
 	border: 0;
-	border-radius: 2px;
+	border-radius: 0.5rem;
 	color: #ffffff;
 	cursor: pointer;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 24px;
 	font-size: 1.5rem;
 	padding: 1.2em 2.2em;
@@ -1511,7 +1521,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	width: auto;
 	height: auto;
 	line-height: 1;
-	box-shadow: inset 0 0 0 9rem rgba(255, 255, 255, 0), 0 0 0 -1rem rgba(24, 19, 7, 0);
+	box-shadow: inset 0 0 0 9rem rgba(255, 255, 255, 0), 0 0 0 -1rem rgba(22, 6, 8, 0);
 	-webkit-transition: all ease-in-out 0.2s;
 	        transition: all ease-in-out 0.2s;
 }
@@ -1523,9 +1533,9 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce #respond input#submit:hover {
 	-webkit-transition: all ease-in-out 0.2s;
 	        transition: all ease-in-out 0.2s;
-	box-shadow: inset 0 0 0 9rem rgba(255, 255, 255, 0.1), 0 1.25rem 1rem -0.5rem rgba(24, 19, 7, 0.146);
+	box-shadow: inset 0 0 0 9rem rgba(255, 255, 255, 0.1), 0 1.25rem 1rem -0.5rem rgba(22, 6, 8, 0.146);
 	color: #ffffff;
-	background-color: #b79449;
+	background-color: #466b3c;
 }
 
 .woocommerce a.button.disabled,
@@ -1543,7 +1553,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce #respond input#submit.disabled,
 .woocommerce #respond input#submit:disabled,
 .woocommerce #respond input#submit:disabled[disabled] {
-	background-color: #cecece;
+	background-color: #f2e7e9;
 	padding: 1em 2em;
 }
 
@@ -1554,7 +1564,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce #respond input#submit.alt {
 	font-size: 22.4px;
 	font-size: 1.4rem;
-	background-color: #b79449;
+	background-color: #466b3c;
 }
 
 .woocommerce a.button.alt:hover,
@@ -1562,7 +1572,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce input.button.alt:hover,
 .woocommerce input[type='submit'].alt:hover,
 .woocommerce #respond input#submit.alt:hover {
-	background-color: #b79449;
+	background-color: #466b3c;
 }
 
 .woocommerce #reviews .comment .meta {
@@ -1604,8 +1614,8 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce form .form-row.woocommerce-validated input.input-text,
 .woocommerce form .form-row.woocommerce-validated select,
 .woocommerce form .form-row.woocommerce-validated .select2-container {
-	border-color: #cecece;
-	border-radius: 2px;
+	border-color: #7a444b;
+	border-radius: 0.5rem;
 }
 
 .woocommerce form.checkout_coupon:focus,
@@ -1615,7 +1625,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce form .form-row.woocommerce-validated input.input-text:focus,
 .woocommerce form .form-row.woocommerce-validated select:focus,
 .woocommerce form .form-row.woocommerce-validated .select2-container:focus {
-	border-color: #544d3e;
+	border-color: #7a444b;
 }
 
 .woocommerce.widget.widget_price_filter .price_slider_amount .button,
@@ -1628,7 +1638,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	height: 80px;
 	height: 5rem;
 	border-width: 2px;
-	border-color: #cecece;
+	border-color: #7a444b;
 }
 
 .woocommerce .select2-selection .select2-selection__arrow {
@@ -1669,8 +1679,8 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce-MyAccount-navigation {
-	border: 2px solid #cecece;
-	border-radius: 2px;
+	border: 2px solid #7a444b;
+	border-radius: 0.5rem;
 	padding: 0;
 	margin-bottom: 40px;
 }
@@ -1682,7 +1692,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce-MyAccount-navigation ul li {
 	list-style-type: none;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .woocommerce-MyAccount-navigation ul li:first-of-type a {
@@ -1690,18 +1700,18 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce-MyAccount-navigation ul li.is-active > a {
-	background-color: #cecece;
+	background-color: #f2e7e9;
 	padding: 0.618em 1.382em;
 }
 
 .woocommerce-MyAccount-navigation ul li a {
 	padding: 0.5em 1.382em;
 	display: block;
-	border-top: 2px solid #cecece;
+	border-top: 2px solid #7a444b;
 	text-decoration: none;
 	font-size: 22.4px;
 	font-size: 1.4rem;
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-family: 'Lobster Two', cursive;
 }
 
 .content-sidebar.woocommerce-account .woocommerce-MyAccount-navigation,
@@ -1732,16 +1742,16 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 	font-size: 28.8px;
 	font-size: 1.8rem;
 	margin-bottom: 40px;
-	color: #b79449;
+	color: #466b3c;
 }
 
 .woocommerce .woocommerce-breadcrumb a {
-	color: #b79449;
+	color: #466b3c;
 	text-decoration: none;
 }
 
 .woocommerce .woocommerce-breadcrumb a:hover {
-	color: #b79449;
+	color: #466b3c;
 }
 
 /* ### WooCommerce Reviews */
@@ -1764,12 +1774,12 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 
 .woocommerce #reviews #comments ol.commentlist li .comment-text {
 	border-color: transparent;
-	border-radius: 2px;
+	border-radius: 0.5rem;
 	padding: 0;
 }
 
 .woocommerce .comment-reply-title {
-	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-family: 'Lobster Two', cursive;
 	font-size: 32px;
 	font-size: 2rem;
 	padding: 0 0 1em;
@@ -1797,14 +1807,14 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-info {
 	font-size: 28.8px;
 	font-size: 1.8rem;
-	background-color: #cecece;
-	border-top-color: seagreen;
+	background-color: rgba(242, 231, 233, 0.5);
+	border-top-color: #466b3c;
 }
 
 .woocommerce-message::before,
 .woocommerce-error::before,
 .woocommerce-info::before {
-	color: seagreen;
+	color: #466b3c;
 }
 
 .woocommerce-MyAccount-content .woocommerce-message,
@@ -1828,7 +1838,7 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 .woocommerce-message a,
 .woocommerce-error a,
 .woocommerce-info a {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .woocommerce .woocommerce-error {
@@ -1841,11 +1851,11 @@ http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
 }
 
 .woocommerce .woocommerce-info {
-	border-top-color: dodgerblue;
+	border-top-color: #466b3c;
 }
 
 .woocommerce .woocommerce-info::before {
-	color: dodgerblue;
+	color: #466b3c;
 }
 
 div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricted-content-message {
@@ -1888,7 +1898,7 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 
 .woocommerce .widget_shopping_cart .total,
 .woocommerce.widget_shopping_cart .total {
-	border-top: 2px solid #cecece;
+	border-top: 2px solid #7a444b;
 }
 
 .woocommerce .widget_shopping_cart .buttons a,
@@ -1920,7 +1930,7 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 
 /* ### Woo Filter */
 .woocommerce.widget_price_filter .price_slider_wrapper .ui-widget-content {
-	background-color: #cecece;
+	background-color: #f2e7e9;
 }
 
 .woocommerce.widget_price_filter .ui-slider .ui-slider-range {
@@ -1928,13 +1938,13 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 }
 
 .woocommerce.widget_price_filter .ui-slider .ui-slider-handle {
-	background-color: #b79449;
+	background-color: #466b3c;
 }
 
 .woocommerce .widget_layered_nav ul li.chosen a::before,
 .woocommerce .widget_layered_nav_filters ul li a::before,
 .woocommerce .widget_rating_filter ul li.chosen a::before {
-	color: #b79449;
+	color: #466b3c;
 }
 
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
@@ -1960,6 +1970,11 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 	letter-spacing: 1px;
 }
 @media (min-width: 32em) {
+	body .woocommerce ul.products[class*='columns-'] li.product,
+	.woocommerce-page ul.products[class*='columns-'] li.product {
+		width: -webkit-calc((100% - 4rem) / 2);
+		width:         calc((100% - 4rem) / 2);
+	}
 	.woocommerce .woocommerce-ordering {
 		float: right;
 		clear: none;
@@ -1987,8 +2002,10 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 	}
 }
 @media (min-width: 48em) {
-	.site-header .fa-shopping-cart {
-		margin-right: 2em;
+	body .woocommerce ul.products[class*='columns-'] li.product,
+	.woocommerce-page ul.products[class*='columns-'] li.product {
+		width: -webkit-calc((100% - 2 * 4rem) / 3);
+		width:         calc((100% - 2 * 4rem) / 3);
 	}
 	.woocommerce ul.products {
 		display: -webkit-box;
@@ -2023,42 +2040,6 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 		float: right;
 	}
 }
-@media (min-width: 56em) {
-	.woocommerce div.product div.images,
-	.woocommerce #content div.product div.images,
-	.woocommerce-page div.product div.images,
-	.woocommerce-page #content div.product div.images {
-		max-width: 48%;
-	}
-	.woocommerce div.product div.summary,
-	.woocommerce #content div.product div.summary,
-	.woocommerce-page div.product div.summary,
-	.woocommerce-page #content div.product div.summary {
-		width: 48%;
-	}
-	.woocommerce-cart form.checkout .col2-set,
-	.woocommerce-checkout form.checkout .col2-set,
-	#add_payment_method form.checkout .col2-set {
-		width: 48.717948717948715%;
-		float: left;
-	}
-	.woocommerce-cart form.checkout #order_review_heading,
-	.woocommerce-checkout form.checkout #order_review_heading,
-	#add_payment_method form.checkout #order_review_heading {
-		margin-top: 0;
-		margin-bottom: 1em;
-	}
-	.woocommerce-cart form.checkout #order_review_heading,
-	.woocommerce-cart form.checkout .woocommerce-checkout-review-order,
-	.woocommerce-checkout form.checkout #order_review_heading,
-	.woocommerce-checkout form.checkout .woocommerce-checkout-review-order,
-	#add_payment_method form.checkout #order_review_heading,
-	#add_payment_method form.checkout .woocommerce-checkout-review-order {
-		width: 48.717948717948715%;
-		float: right;
-		margin-left: 2.564102564102564%;
-	}
-}
 @media screen and (min-width: 56.875em) {
 	.twentysixteen .site-main {
 		margin-right: 0;
@@ -2083,6 +2064,45 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 		padding: 0 !important;
 	}
 }
+@media (min-width: 60em) {
+	.woocommerce div.product div.images,
+	.woocommerce #content div.product div.images,
+	.woocommerce-page div.product div.images,
+	.woocommerce-page #content div.product div.images {
+		max-width: 48%;
+	}
+	.woocommerce div.product div.summary,
+	.woocommerce #content div.product div.summary,
+	.woocommerce-page div.product div.summary,
+	.woocommerce-page #content div.product div.summary {
+		width: 48%;
+	}
+	.woocommerce ul.products li.product img {
+		padding: 2rem;
+	}
+	.woocommerce-cart form.checkout .col2-set,
+	.woocommerce-checkout form.checkout .col2-set,
+	#add_payment_method form.checkout .col2-set {
+		width: 48.717948717948715%;
+		float: left;
+	}
+	.woocommerce-cart form.checkout #order_review_heading,
+	.woocommerce-checkout form.checkout #order_review_heading,
+	#add_payment_method form.checkout #order_review_heading {
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	.woocommerce-cart form.checkout #order_review_heading,
+	.woocommerce-cart form.checkout .woocommerce-checkout-review-order,
+	.woocommerce-checkout form.checkout #order_review_heading,
+	.woocommerce-checkout form.checkout .woocommerce-checkout-review-order,
+	#add_payment_method form.checkout #order_review_heading,
+	#add_payment_method form.checkout .woocommerce-checkout-review-order {
+		width: 48.717948717948715%;
+		float: right;
+		margin-left: 2.564102564102564%;
+	}
+}
 @media screen and (min-width: 1040px) {
 	.twentyfourteen .tfwc {
 		padding-right: 15px;
@@ -2093,6 +2113,11 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 	.twentyfourteen .tfwc {
 		padding-right: 30px;
 		padding-left: 30px;
+	}
+}
+@media (min-width: 72em) {
+	.woocommerce ul.products li.product img {
+		padding: 4rem;
 	}
 }
 @media screen and (min-width: 1218px) {

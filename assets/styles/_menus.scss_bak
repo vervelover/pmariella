@@ -1,10 +1,11 @@
 /* ## Menus
 --------------------------------------------- */
 
-.menu, #mega-menu-wrap-primary #mega-menu-primary {
+.menu {
     width: 100%;
     font-family: $font-body;
-    font-weight: $normal;
+    font-weight: bold;
+    letter-spacing: 1px;
     font-size: 1.8rem;
     line-height: 1;
     text-align: center;
@@ -17,21 +18,13 @@
     }
 }
 
-#mega-menu-wrap-primary #mega-menu-primary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-item, .mega-menu-item {
+.menu-item {
     display: block;
     padding: 0.5em 0;
     width: 100%;
     position: relative;
     @include breakpoint(md) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
         padding: 0;
         width: auto;
     }
@@ -42,7 +35,7 @@
     &:focus,
     &.sfHover {
         outline: none;
-        >.sub-menu, .mega-sub-menu {
+        >.sub-menu {
             @include breakpoint(md) {
                 opacity: 1 !important;
                 pointer-events: all;
@@ -93,7 +86,6 @@
     a {
         width: auto;
         text-decoration: none;
-        font-weight: $bolder;
         display: inline-block;
         padding: 0.5em 0;
         color: $light;
@@ -122,7 +114,7 @@
 /* ## Sub Menus
 --------------------------------------------- */
 
-.sub-menu, .mega-sub-menu {
+.sub-menu {
     display: none;
     font-size: 1.4rem;
     padding: 1em 0;
@@ -173,7 +165,7 @@
             padding: 1em;
         }
     }
-    .sub-menu, .mega-sub-menu {
+    .sub-menu {
         padding-left: 1em;
         @include breakpoint(md) {
             margin: -0.6em 0 0 18.2rem;
@@ -243,7 +235,7 @@
         .wrap {
             padding: 0 5%;
         }
-        .menu-item, .mega-menu-item {
+        .menu-item {
             display: inline-block;
             width: auto;
             margin: 0 0.5em;
@@ -252,7 +244,7 @@
     .wrap {
         height: 100%;
     }
-    .menu, .mega-menu {
+    .menu {
         min-height: 100%;
         padding: 0 0 1em;
         flex-direction: column;
@@ -270,7 +262,7 @@
 /* ## Menu Toggles
 --------------------------------------------- */
 
-.menu-toggle, .mega-menu-toggle {
+.menu-toggle {
     padding: 2.7rem 0;
     cursor: pointer;
     background-color: transparent;
@@ -341,7 +333,7 @@
     }
 }
 
-.sub-menu-toggle, .mega-sub-menu-toggle {
+.sub-menu-toggle {
     position: absolute;
     background-color: transparent;
     padding: 0.9em;

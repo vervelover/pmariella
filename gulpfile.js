@@ -358,7 +358,7 @@ gulp.task('watch', function () {
 	 * certificate on your local development environment.
 	 */
 	 browsersync( {
-	     proxy: 'localhost/mastyle4'
+	     proxy: 'localhost/pasticceriamariella'
 	 } );
 
 	// Run tasks when files change.

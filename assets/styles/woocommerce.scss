@@ -64,9 +64,7 @@
     padding: 0 0 0 1rem;
     color: $dark;
     font-size: 2rem;
-    @include breakpoint(sm) {
-        margin-right: 2em;
-    }
+
     &:hover {
         opacity: 1;
         .cart-count {
@@ -108,6 +106,7 @@
         border-bottom: 0;
     }
     .woocommerce-ordering {
+        display: none;
         width: auto;
         float: left;
         clear: both;
@@ -149,6 +148,8 @@
         }
     }
     ul.products {
+        margin: 0 auto;
+        max-width: map-get($breakpoints, lg);
         @include breakpoint(sm) {
             display: flex;
             flex-wrap: wrap;
@@ -191,6 +192,12 @@
                 margin-bottom: 0 !important;
                 border-radius: $site-radius $site-radius 0 0;
                 @include transition;
+                @include breakpoint(md) {
+                    padding: 2rem;
+                }
+                @include breakpoint(lg) {
+                    padding: 4rem;
+                }
             }
             h2,
             .price .from,
@@ -830,10 +837,10 @@
 .woocommerce-error,
 .woocommerce-info {
     font-size: 1.8rem;
-    background-color: $light;
-    border-top-color: seagreen;
+    background-color: rgba( $light, 0.5);
+    border-top-color: $accent;
     &::before {
-        color: seagreen;
+        color: $accent;
     }
     .woocommerce-MyAccount-content & {
         padding: 1em 1em 1em 3em;
@@ -857,9 +864,9 @@
         }
     }
     .woocommerce-info {
-        border-top-color: dodgerblue;
+        border-top-color: $accent;
         &::before {
-            color: dodgerblue;
+            color: $accent;
         }
     }
 }

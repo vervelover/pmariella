@@ -5,12 +5,11 @@
     position: absolute;
     width: 100%;
     z-index: 100;
-    background-color: $black;
+    background-color: $gray;
     @include transition;
     .has-fixed-header & {
         position: fixed;
         &.shrink {
-            background-color: $dark;
             box-shadow: 0 0 2rem rgba($dark,0.2);
         }
     }
@@ -31,9 +30,11 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        flex-direction: column;
         @include transition;
         @include breakpoint(md) {
             padding: 1rem 0;
+            padding-bottom: 0;
             flex-wrap: nowrap;
             position: relative;
         }
@@ -49,6 +50,7 @@
     position: relative;
     height: 100%;
     display: block;
+    margin: 0 auto;
     flex: 1;
     padding: 2rem 0;
     max-width: 15rem;
@@ -93,9 +95,48 @@
 
 .header-widget-area {
     @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.menu-cart-menu-container {
+
+    display: none;
+
+    @include breakpoint(md) {
         order: 3;
-        margin-left: 1em;
-        margin-right: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+
+        & .widgettitle, .widget-title {
+            display: none;
+        }
+
+        & a, & .fa {
+            color: $light;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & a {
+                padding: 1.5rem .6rem;
+            }
+        }
+
     }
     @media (max-width: map-get($breakpoints,md)) {
         ul,
@@ -121,6 +162,106 @@
         }
     }
 }
+
+.site-header .fa-shopping-cart {
+    padding: 0;
+    font-size: 2rem;
+    margin-top: -.4rem;
+
+    &:hover {
+        opacity: 1;
+        .cart-count {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.header-cart-menu {
+    position: relative;
+}
+
+.cart-count {
+    font-family: $font-body;
+    font-size: 1.1rem;
+    font-weight: $normal;
+    background-color: transparent;
+    color: $white;
+    height: 14px;
+    width: 14px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: -.3rem;
+    top: -.6rem;
+    line-height: 14px;
+}
+
+.cart-total {
+    position: absolute;
+    text-indent: -9999px;
+    visibility: hidden;
+}
+
+/* ## Product Search
+--------------------------------------------- */
+
+.product-search {
+
+    display: flex;
+
+    &__input {
+
+        color: $light;
+        background-color: transparent;
+        border: none;
+        border-radius: none;
+        padding: 0;
+        width: 130px;
+        padding-left: 1rem;
+        transition: all .5s;
+
+        &::placeholder {
+            color: $light;
+        }
+
+        @include breakpoint(md) {
+            font-size: 1.3rem;
+        }
+
+        &:focus {
+            color: $black;
+            padding: 0 1rem;
+            border-radius: 100px;
+            width: 190px;
+            background-color: $light;
+            &::placeholder {
+                color: $gray;
+            }
+        }
+
+    }
+
+    &__input:focus + &__button {
+        margin-left: 0;
+    }
+
+    &__button {
+        padding: 0;
+        background-color: transparent;
+        margin-left: -1rem;
+        margin-top: .1rem;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &__icon {
+        font-size: 1.6rem;
+    }
+
+}
+
 
 /* ## Custom Header
 --------------------------------------------- */

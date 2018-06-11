@@ -3,7 +3,7 @@
 
 .site-footer {
     background-color: $dark;
-    color: $medium;
+    color: $light;
     position: relative;
     >.wrap {
         padding: 0 5vw 5vw;
@@ -18,7 +18,7 @@
         }
     }
     a {
-        color: $medium;
+        color: $light;
         text-decoration: none;
         &:hover {
             color: $light;
@@ -100,7 +100,7 @@
     .widget-title {
         font-size: 1.6rem;
         margin-bottom: 1.5em;
-        color: $border;
+        color: $light;
     }
     .menu-item {
         width: 50%;

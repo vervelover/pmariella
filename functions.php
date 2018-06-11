@@ -22,7 +22,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 // Define theme constants.
 define( 'CHILD_THEME_NAME', 'Business Pro Theme' );
 define( 'CHILD_THEME_URL', 'https://seothemes.com/themes/business-pro' );
-define( 'CHILD_THEME_VERSION', '1.0.5' );
+define( 'CHILD_THEME_VERSION', '1.0.5a20180611a01' );
 
 // Set Localization (do not remove).
 load_child_theme_textdomain( 'business-pro-theme', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'business-pro-theme' ) );
@@ -191,7 +191,7 @@ function business_scripts_styles() {
 	wp_dequeue_style( 'woocommerce-layout' );
 
 	// Enqueue Google fonts.
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Muli:300,400,600,700|Adamina', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Muli:300,400,600,700|Lobster+Two', array(), CHILD_THEME_VERSION );
 
 	// Get Icon Widget plugin settings.
 	$icon_settings = get_option( 'icon_widget_settings' );
@@ -250,3 +250,91 @@ include_once( get_stylesheet_directory() . '/includes/defaults.php' );
 
 // Load theme's recommended plugins.
 include_once( get_stylesheet_directory() . '/includes/plugins.php' );
+
+// Modify woocommerce smallscreen breakpoint
+function ap_filter_woocommerce_style_smallscreen_breakpoint( $breakpoint ) {
+    $breakpoint = '48em';
+    return $breakpoint;
+};
+add_filter( 'woocommerce_style_smallscreen_breakpoint', 'ap_filter_woocommerce_style_smallscreen_breakpoint', 10, 1 );
+
+// CUSTOMIZE WOOCOMMERCE PRODUCT SEARCH
+
+add_filter('get_product_search_form', 'ap_custom_product_searchform');
+/**
+ * Filter WooCommerce  Search Field
+ *
+ */
+function ap_custom_product_searchform($form) {
+
+	$form = '<form class="product-search" role="search" method="get" id="searchform" action="'.esc_url(home_url('/')).'">
+                    <label class="screen-reader-text" for="s">'.__('Search for:', 'woocommerce').'</label>
+                    <input class="product-search__input" type="text" value="'.get_search_query().'" name="s" id="s" placeholder="'.__('Search products', 'woocommerce').'" />
+					<button class="product-search__button" for="s" class="search__button" type="submit" value="'.esc_attr__('Search', 'woocommerce').'" name="button">
+				       	<i class="product-search__icon fa fa-search"></i>
+				    </button>
+                    <input type="hidden" name="post_type" value="product" />
+                </form>';
+	return $form;
+}
+
+// REGISTER HEADER TOP MENU
+
+function ap_register_top_menu() {
+	register_nav_menu('top-menu', __('Top Menu'));
+}
+
+add_action('init', 'ap_register_top_menu');
+
+// ADD AJAX CART FRAGMENTS
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'ap_header_add_to_cart_fragment' );
+
+function ap_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	ap_cart_link();
+
+	$fragments['div.menu-cart-menu-container'] = ob_get_clean();
+	return $fragments;
+}
+
+// ADD AJAX CART AND SEARCH IN HEADER
+
+add_action( 'genesis_header', 'ap_cart_link');
+function ap_cart_link() {
+	global $woocommerce;
+
+	$cart_item = array(
+		'cart_url'            => wc_get_cart_url(),
+		'cart_contents_count' => $woocommerce->cart->get_cart_contents_count(),
+		'cart_total'          => WC()->cart->get_cart_total(),
+		'cart_name'           => __('Carrello', 'business-pro'),
+	);
+
+	$woosearchform = get_product_search_form(false);
+
+	$cart_li = "<li class='menu-item header-cart-menu'><a class='cart-customlocation' href='".$cart_item['cart_url']."'><i class='fa fa-shopping-cart'></i><span class='items cart-count'>".$cart_item['cart_contents_count']."</span>".$cart_item['cart_name']."</a></li><li class='menu-header-search'>".$woosearchform."</li>";
+
+
+	?>
+	<div class="menu-cart-menu-container">
+		<ul id="menu-cart-menu" class="menu">
+			<?php
+			$menu_items = wp_get_nav_menu_items('Cart Menu');
+			foreach ( (array) $menu_items as $key => $menu_item ) {
+		        $title = $menu_item->title;
+		        $url = $menu_item->url;
+		        echo '<li><a href="' . $url . '">' . $title . '</a></li>';
+		    }
+			echo $cart_li;
+			?>
+		</ul>
+	</div>
+	<?php
+}

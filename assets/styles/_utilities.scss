@@ -11,7 +11,7 @@
 $breakpoints: (
 	xs: 32em,
 	sm: 48em,
-	md: 56em,
+	md: 60em,
 	lg: 72em,
 	xl: 100em
 );
@@ -19,36 +19,37 @@ $breakpoints: (
 /* ### Colors */
 
 /** palette here:
-http://paletton.com/#uid=10+0u0k8jax00pSjdmWlZ2Zk11g */
+http://paletton.com/palette.php?uid=25z0u0keag1SPfFm-0nn12T1pvF */
 
-$accent:  #b79449;
-$black:   #0a0804;
-$dark:    #181307;
-$gray:    #544d3e;
-$medium:  #544d3e;
-$border:  #cecece;
-$light:   #cecece;
+$accent:  #466b3c;
+$black:   #030101;
+$dark:    #160608;
+$gray:    #7a444b;
+$medium:  #7a444b;
+$border:  #7a444b;
+$light:   #f2e7e9;
 $white:   #ffffff;
 $overlay: rgba(0, 0, 0, .1);
 
 /* ### Typography */
 
-$font-heading: 'Muli', sans-serif;
+$font-heading: 'Lobster Two', cursive;;
 $font-body:    'Muli', sans-serif;
 $thin:		   300;
-$normal:  	   300;
-$bolder:  	   300;
-$bold:    	   300;
+$normal:  	   400;
+$bolder:  	   600;
+$bold:    	   700;
 
 /* ### Other */
 
-$site-radius:     2px;
+$site-radius:     .5rem;
 $site-border:     2px solid $border;
 $site-transition: 0.75s cubic-bezier(0, 1, 0.5, 1);
+$heading-shadow:  0 1rem 2rem rgba(0, 0, 0, 0.4);
 
 /* ### Column widths */
 
-$margin-left:   .2rem;
+$margin-left:   4rem;
 
 $one-half :     calc((100% - #{$margin-left}) / 2);
 $one-third:     calc((100% - 2 * #{$margin-left}) / 3);
@@ -56,13 +57,13 @@ $one-fourth:    calc((100% - 3 * #{$margin-left}) / 4);
 $one-fifth:     calc((100% - 4 * #{$margin-left}) / 5);
 $one-sixth:     calc((100% - 5 * #{$margin-left}) / 6);
 $two-thirds:    calc(2 * ((100% - 2 * #{$margin-left}) / 3) + #{$margin-left});
-$two-fifths:    38.4615384615384616%;
+$two-fifths:    calc(2 * ((100% - 4 * #{$margin-left}) / 5) + #{$margin-left});
 $three-fourths: calc(3 * ((100% - 3 * #{$margin-left}) / 4) + 2 * #{$margin-left});
-$three-fifths:  58.9743589743589744%;
-$four-fifths:   79.4871794871794872%;
-$five-sixths:   82.90598290598291%;
+$three-fifths:  calc(3 * ((100% - 4 * #{$margin-left}) / 5) + 2 * #{$margin-left});
+$four-fifths:   calc(4 * ((100% - 4 * #{$margin-left}) / 5) + 3 * #{$margin-left});
+$five-sixths:   calc(5 * ((100% - 5 * #{$margin-left}) / 6) + 4 * #{$margin-left});
 
-$woocommerce-columns: $one-fourth;
+$woocommerce-columns: $one-third;
 
 
 /* # Mixins
