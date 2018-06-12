@@ -249,11 +249,15 @@
         }
     }
     .widget-title {
-        font-size: 3rem;
+        font-size: 5rem;
+        text-shadow: $heading-shadow;
     }
     p {
         margin-bottom: 0;
         color: $light;
+        font-weight: $bold;
+        font-size: 2.5rem;
+        text-shadow: $heading-shadow;
     }
     button,
     .button,

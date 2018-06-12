@@ -567,14 +567,26 @@
     }
     .cart-collaterals {
         padding-top: 1em;
+        .cart_totals {
+            width: 100%;
+            @include breakpoint(md) {
+                width: 48%;
+            }
+        }
         .cart_totals tr {
             th,
             td {
                 border-color: $border;
-                border-width: 2px;
             }
         }
     }
+    & .wc-proceed-to-checkout a.checkout-button.button.alt {
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+            font-size: 2rem;
+            font-family: $font-body;
+    }
+
 }
 
 .woocommerce-checkout-review-order-table th.product-total {
