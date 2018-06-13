@@ -1,69 +1,68 @@
 /** Friday 8th June 2018 13:19:12 UTC (core) **/
 
-#mega-menu-wrap-primary, #mega-menu-wrap-primary #mega-menu-primary, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link {
-  -moz-transition: none;
-  -o-transition: none;
-  -webkit-transition: none;
-  transition: none;
-  -webkit-border-radius: 0 0 0 0;
-  -moz-border-radius: 0 0 0 0;
-  -ms-border-radius: 0 0 0 0;
-  -o-border-radius: 0 0 0 0;
-  border-radius: 0 0 0 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  background: none;
-  border: 0;
-  bottom: auto;
-  box-sizing: border-box;
-  clip: auto;
-  display: block;
-  float: none;
-  height: auto;
-  left: auto;
-  list-style-type: none;
-  margin: 0;
-  min-height: 0;
-  opacity: 1;
-  outline: none;
-  overflow: visible;
-  padding: 0;
-  position: relative;
-  right: auto;
-  text-align: left;
-  text-decoration: none;
-  text-transform: none;
-  top: auto;
-  vertical-align: baseline;
-  visibility: inherit;
-  width: auto;
-  word-wrap: break-word;
-}
+// #mega-menu-wrap-primary, #mega-menu-wrap-primary #mega-menu-primary, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link {
+//   -moz-transition: none;
+//   -o-transition: none;
+//   -webkit-transition: none;
+//   transition: none;
+//   -webkit-border-radius: 0 0 0 0;
+//   -moz-border-radius: 0 0 0 0;
+//   -ms-border-radius: 0 0 0 0;
+//   -o-border-radius: 0 0 0 0;
+//   border-radius: 0 0 0 0;
+//   -webkit-box-shadow: none;
+//   -moz-box-shadow: none;
+//   -ms-box-shadow: none;
+//   -o-box-shadow: none;
+//   box-shadow: none;
+//   border: 0;
+//   bottom: auto;
+//   box-sizing: border-box;
+//   clip: auto;
+//   display: block;
+//   float: none;
+//   height: auto;
+//   left: auto;
+//   list-style-type: none;
+//   margin: 0;
+//   min-height: 0;
+//   opacity: 1;
+//   outline: none;
+//   overflow: visible;
+//   padding: 0;
+//   position: relative;
+//   right: auto;
+//   text-align: left;
+//   text-decoration: none;
+//   text-transform: none;
+//   top: auto;
+//   vertical-align: baseline;
+//   visibility: inherit;
+//   width: auto;
+//   word-wrap: break-word;
+// }
 #mega-menu-wrap-primary:before, #mega-menu-wrap-primary #mega-menu-primary:before, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu:before, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item:before, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link:before, #mega-menu-wrap-primary:after, #mega-menu-wrap-primary #mega-menu-primary:after, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu:after, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item:after, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link:after {
   display: none;
 }
-#mega-menu-wrap-primary {
-  -webkit-border-radius: 0px 0px 0px 0px;
-  -moz-border-radius: 0px 0px 0px 0px;
-  -ms-border-radius: 0px 0px 0px 0px;
-  -o-border-radius: 0px 0px 0px 0px;
-  border-radius: 0px 0px 0px 0px;
-}
-#mega-menu-wrap-primary.mega-keyboard-navigation .mega-menu-toggle:focus, #mega-menu-wrap-primary.mega-keyboard-navigation #mega-menu-primary a:focus, #mega-menu-wrap-primary.mega-keyboard-navigation #mega-menu-primary input:focus {
-  -webkit-box-shadow: inset 0px 0px .3rem .1rem #0ff;
-  -moz-box-shadow: inset 0px 0px .3rem .1rem #0ff;
-  -ms-box-shadow: inset 0px 0px .3rem .1rem #0ff;
-  -o-box-shadow: inset 0px 0px .3rem .1rem #0ff;
-  box-shadow: inset 0px 0px .3rem .1rem #0ff;
-}
-#mega-menu-wrap-primary #mega-menu-primary {
-  visibility: visible;
-  text-align: left;
-  padding: 0px 0px 0px 0px;
-}
+// #mega-menu-wrap-primary {
+//   -webkit-border-radius: 0px 0px 0px 0px;
+//   -moz-border-radius: 0px 0px 0px 0px;
+//   -ms-border-radius: 0px 0px 0px 0px;
+//   -o-border-radius: 0px 0px 0px 0px;
+//   border-radius: 0px 0px 0px 0px;
+// }
+// #mega-menu-wrap-primary.mega-keyboard-navigation .mega-menu-toggle:focus, #mega-menu-wrap-primary.mega-keyboard-navigation #mega-menu-primary a:focus, #mega-menu-wrap-primary.mega-keyboard-navigation #mega-menu-primary input:focus {
+//   -webkit-box-shadow: inset 0px 0px .3rem .1rem #0ff;
+//   -moz-box-shadow: inset 0px 0px .3rem .1rem #0ff;
+//   -ms-box-shadow: inset 0px 0px .3rem .1rem #0ff;
+//   -o-box-shadow: inset 0px 0px .3rem .1rem #0ff;
+//   box-shadow: inset 0px 0px .3rem .1rem #0ff;
+// }
+// #mega-menu-wrap-primary #mega-menu-primary {
+//   visibility: visible;
+//   text-align: left;
+//   padding: 0px 0px 0px 0px;
+// }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary {
 
@@ -136,6 +135,7 @@
 }
 #mega-menu-wrap-primary #mega-menu-primary input, #mega-menu-wrap-primary #mega-menu-primary img {
   max-width: 100%;
+  border-radius: 3rem;
 }
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item > ul.mega-sub-menu {
   display: block;
@@ -243,7 +243,7 @@
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
   font-weight: $normal;
   color: $white;
-  text-decoration: underline;
+  background: $medium;
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
@@ -274,7 +274,6 @@
   display: block;
   color: $white;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0);
   -webkit-border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
   -ms-border-radius: 0px 0px 0px 0px;
@@ -316,7 +315,6 @@
     line-height: 4rem;
     height: 4rem;
     padding: 0 1rem;
-    background: transparent;
     text-align: left;
     color: $white;
     font-size: 1.4rem;
@@ -325,13 +323,11 @@
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
   width: 100%;
   float: left;
-  background: transparent;
   border: 0;
 }
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column {
   float: left;
   min-height: .1rem;
-  background: transparent;
   border: 0;
 }
 @media only screen and (min-width: 57em) {
@@ -590,7 +586,7 @@
   -o-border-radius: 0px 0px 0px 0px;
   border-radius: 0px 0px 0px 0px;
   background: $light;
-  padding: 0px 0px 0px 0px;
+  padding: 1rem;
   position: absolute;
   width: 100%;
   border-top: 0px solid $white;
@@ -599,6 +595,7 @@
   border-bottom: 0px solid $white;
   max-width: none;
   left: 0;
+  box-shadow: 0 5px 20px rgba( $dark, 0.2 );
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
@@ -776,10 +773,10 @@
   color: $gray;
   font-family: inherit;
   font-size: 1.6rem;
-  text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
-  margin: 0px 0px 0px 0px;
+  font-family: $font-heading;
+  text-align: center;
+  margin: 0px 0px 1rem 0px;
   padding: 0px 0px .5rem 0px;
   vertical-align: top;
   display: block;
@@ -809,7 +806,6 @@
   color: $gray;
   font-weight: bold;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0);
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link {
   color: $gray;
@@ -827,7 +823,6 @@
   color: $gray;
   font-weight: normal;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0);
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
@@ -863,7 +858,6 @@
   color: $gray;
   font-weight: normal;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0);
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu {
   z-index: 999;

@@ -42,6 +42,7 @@
     &:focus,
     &.sfHover {
         outline: none;
+        background: $border;
         >.sub-menu, .mega-sub-menu {
             @include breakpoint(md) {
                 opacity: 1 !important;
@@ -122,7 +123,7 @@
 /* ## Sub Menus
 --------------------------------------------- */
 
-.sub-menu, .mega-sub-menu {
+.sub-menu {
     display: none;
     font-size: 1.4rem;
     padding: 1em 0;
@@ -173,7 +174,7 @@
             padding: 1em;
         }
     }
-    .sub-menu, .mega-sub-menu {
+    .sub-menu {
         padding-left: 1em;
         @include breakpoint(md) {
             margin: -0.6em 0 0 18.2rem;
@@ -215,7 +216,7 @@
     bottom: -1rem;
     display: none;
     @include breakpoint(md) {
-        background-color: transparent;
+        background-color: $gray;
         border: none;
         position: relative;
         top: auto;
@@ -228,6 +229,9 @@
         padding: 0;
         overflow: visible;
         -webkit-overflow-scrolling: initial;
+        & li:hover {
+            background-color: $light;
+        }
     }
     &.visible {
         display: block;
@@ -341,7 +345,7 @@
     }
 }
 
-.sub-menu-toggle, .mega-sub-menu-toggle {
+.sub-menu-toggle {
     position: absolute;
     background-color: transparent;
     padding: 0.9em;

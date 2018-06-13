@@ -85,8 +85,11 @@
         margin-left: -1.5rem; // Lineawesome fix.
     }
     .widget-title {
-        font-size: 2rem;
-        margin: 1rem auto;
+        font-size: 3rem;
+        margin: 0 auto 4rem;
+    }
+    img {
+        clip-path: circle(40% at 50% 50%);
     }
     p {
         color: $gray;

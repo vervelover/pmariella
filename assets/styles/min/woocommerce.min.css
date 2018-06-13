@@ -2091,7 +2091,7 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 		width: 48%;
 	}
 	.woocommerce ul.products li.product img {
-		padding: 2rem;
+		padding: 0.8rem;
 	}
 	.woocommerce-cart form.checkout .col2-set,
 	.woocommerce-checkout form.checkout .col2-set,
@@ -2133,7 +2133,7 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 }
 @media (min-width: 72em) {
 	.woocommerce ul.products li.product img {
-		padding: 4rem;
+		padding: 1rem;
 	}
 }
 @media screen and (min-width: 1218px) {

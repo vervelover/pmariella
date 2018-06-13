@@ -193,10 +193,10 @@
                 border-radius: $site-radius $site-radius 0 0;
                 @include transition;
                 @include breakpoint(md) {
-                    padding: 2rem;
+                    padding: .8rem;
                 }
                 @include breakpoint(lg) {
-                    padding: 4rem;
+                    padding: 1rem;
                 }
             }
             h2,
