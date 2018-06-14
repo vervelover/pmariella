@@ -1022,6 +1022,7 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 
 .woocommerce ul.products li.product a {
 	overflow: hidden;
+	outline: none;
 }
 
 .woocommerce ul.products li.product img {
@@ -1167,6 +1168,8 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 	font-size: 24px;
 	font-size: 1.5rem;
 	color: #7a444b;
+	margin-bottom: 24px;
+	margin-bottom: 1.5rem;
 }
 
 .woocommerce div.product form.cart {
@@ -1231,8 +1234,8 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
 	font-family: 'Lobster Two', cursive;
-	font-size: 36.8px;
-	font-size: 2.3rem;
+	font-size: 28.8px;
+	font-size: 1.8rem;
 	letter-spacing: 0.05em;
 	color: rgba(122, 68, 75, 0.5);
 	padding: 0.5em 1em;
