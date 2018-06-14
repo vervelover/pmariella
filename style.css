@@ -1378,16 +1378,6 @@ img.alignright,
 	margin-top: -0.4rem;
 }
 
-.site-header .fa-shopping-cart:hover {
-	opacity: 1;
-}
-
-.site-header .fa-shopping-cart:hover .cart-count {
-	-webkit-transform: scale(1.2);
-	    -ms-transform: scale(1.2);
-	        transform: scale(1.2);
-}
-
 .header-cart-menu {
 	position: relative;
 }
@@ -1589,7 +1579,7 @@ img.alignright,
 
 .page-header h1 {
 	max-width: 48em;
-	margin: 0 auto 0.382em;
+	margin: 0 auto;
 }
 
 .page-header p {
@@ -3733,6 +3723,8 @@ a.flex-prev::before {
 .front-page-1 h1 {
 	color: #f2e7e9;
 	font-weight: 400;
+	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 /* ### Front Page 2 */
@@ -5584,7 +5576,7 @@ a.flex-prev::before {
 	}
 	.menu-cart-menu-container li:hover,
 	.menu-cart-menu-container li:focus {
-		background: rgba(122, 68, 75, 0.4);
+		background-color: rgba(122, 68, 75, 0.7);
 	}
 	.menu-cart-menu-container li.menu-header-search,
 	.menu-cart-menu-container li.menu-header-search:hover,

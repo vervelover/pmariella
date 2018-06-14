@@ -142,7 +142,7 @@
             }
             &:hover,
             &:focus {
-                background: rgba( $gray, .4);
+                background-color: $medium;
             }
             &.menu-header-search, &.menu-header-search:hover, &.menu-header-search:focus {
                 background: $gray;
@@ -179,13 +179,6 @@
     padding: 0;
     font-size: 2rem;
     margin-top: -.4rem;
-
-    &:hover {
-        opacity: 1;
-        .cart-count {
-            transform: scale(1.2);
-        }
-    }
 }
 
 .header-cart-menu {
@@ -344,7 +337,7 @@
     }
     h1 {
         max-width: map-get($breakpoints,sm);
-        margin: 0 auto 0.382em;
+        margin: 0 auto;
     }
     p {
         max-width: map-get($breakpoints,sm);

@@ -64,6 +64,7 @@
     h1 {
         color: $light;
         font-weight: $normal;
+        margin-bottom: 3rem;
         @include breakpoint(xs) {
             font-size: 2.2em;
         }

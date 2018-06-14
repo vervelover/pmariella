@@ -1213,7 +1213,8 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
-	padding-left: 5px;
+	padding-left: 8px;
+	padding-left: 0.5rem;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
