@@ -175,7 +175,7 @@
                 margin-bottom: 3rem;
             }
             &:hover {
-                box-shadow: 0 2rem 2rem -1rem rgba($dark,0.1);
+                box-shadow: 0 2rem 2rem rgba($dark,0.3);
             }
             &:before,
             &:after {
@@ -341,33 +341,44 @@
 
 /* ### WooCommerce Product Tabs */
 
-.woocommerce div.product .woocommerce-tabs ul.tabs {
-    padding-left: 5px;
-    &::before {
-        border: 1px solid $border;
+.woocommerce div.product .woocommerce-tabs {
+
+    h2 {
+        display: none;
     }
-    li {
-        border: $site-border;
-    }
-    li {
-        background-color: $light;
-        border-radius: $site-radius;
-        padding: 0;
-        &::after,
+
+    ul.tabs {
+        padding-left: 5px;
         &::before {
-            display: none;
+            border: 1px solid $border;
         }
-        a {
-            color: $dark;
-            padding: 0.5em 1em;
-            font-weight: $normal;
-            font-size: 1.6rem;
-            letter-spacing: 0.05em;
-            &:hover {
-                color: $accent;
+
+        li {
+            border: $site-border;
+            background-color: $light;
+            border-radius: 0;
+            padding: 0;
+            &::after,
+            &::before {
+                display: none;
+            }
+            a {
+                font-family: $font-heading;
+                font-size: 2.3rem;
+                letter-spacing: 0.05em;
+                color: $border;
+                padding: 0.5em 1em;
+                outline: none;
+                &:hover {
+                    color: $accent;
+                }
+            }
+            &.active a {
+                color: $gray;
             }
         }
     }
+
 }
 
 

@@ -1007,7 +1007,7 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 }
 
 .woocommerce ul.products li.product:hover {
-	box-shadow: 0 2rem 2rem -1rem rgba(22, 6, 8, 0.1);
+	box-shadow: 0 2rem 2rem rgba(22, 6, 8, 0.3);
 }
 
 .woocommerce ul.products li.product:before,
@@ -1205,6 +1205,10 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 }
 
 /* ### WooCommerce Product Tabs */
+.woocommerce div.product .woocommerce-tabs h2 {
+	display: none;
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs {
 	padding-left: 5px;
 }
@@ -1215,11 +1219,8 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
 	border: 2px solid rgba(122, 68, 75, 0.5);
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li {
 	background-color: #f2e7e9;
-	border-radius: 0.5rem;
+	border-radius: 0;
 	padding: 0;
 }
 
@@ -1229,16 +1230,21 @@ body .woocommerce ul.products[class*='columns-'] li.product,
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-	color: #160608;
-	padding: 0.5em 1em;
-	font-weight: 400;
-	font-size: 25.6px;
-	font-size: 1.6rem;
+	font-family: 'Lobster Two', cursive;
+	font-size: 36.8px;
+	font-size: 2.3rem;
 	letter-spacing: 0.05em;
+	color: rgba(122, 68, 75, 0.5);
+	padding: 0.5em 1em;
+	outline: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
 	color: #466b3c;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	color: #7a444b;
 }
 
 /* Two Sidebar Layouts */
