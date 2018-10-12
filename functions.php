@@ -191,7 +191,7 @@ function business_scripts_styles() {
 	wp_dequeue_style( 'woocommerce-layout' );
 
 	// Enqueue Google fonts.
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Muli:300,400,600,700|Lobster+Two', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,700|Old+Standard+TT:400,700', array(), CHILD_THEME_VERSION );
 
 	// Get Icon Widget plugin settings.
 	$icon_settings = get_option( 'icon_widget_settings' );
@@ -337,4 +337,25 @@ function ap_cart_link() {
 		</ul>
 	</div>
 	<?php
+}
+
+// Custom footer text
+
+remove_action('genesis_footer', 'genesis_do_footer');
+add_action('genesis_footer', 'ap_custom_footer');
+function ap_custom_footer() {
+	?>
+			<p>&copy;
+		 Copyright <?php echo date('Y');
+	?><a href="<?php site_url(); ?>"> Pasticceria Mariella</a> &middot;
+		 All Rights Reserved</p>
+	<?php
+}
+
+// Hide admin bar for non admins
+add_action('after_setup_theme', 'ap_hide_admin_bar');
+function ap_hide_admin_bar() {
+	if (!current_user_can('edit_posts')) {
+  		add_filter( 'show_admin_bar', '__return_false', PHP_INT_MAX );
+	}
 }

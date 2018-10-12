@@ -5,7 +5,7 @@
     position: absolute;
     width: 100%;
     z-index: 100;
-    background-color: $gray;
+    background-color: $white;
     @include transition;
     .has-fixed-header & {
         position: fixed;
@@ -104,7 +104,7 @@
     display: none;
 
     & ul {
-        background: rgba( $dark, 0.98);
+        background: $white;
     }
 
     @include breakpoint(md) {
@@ -122,7 +122,7 @@
         }
 
         & a, & .fa {
-            color: $light;
+            color: $dark;
             text-transform: capitalize;
             text-decoration: none;
             font-weight: 400;
@@ -136,16 +136,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: $gray;
+            background: $white;
             & a {
                 padding: 1.5rem .6rem;
             }
             &:hover,
             &:focus {
-                background-color: $medium;
+                background-color: $white;
             }
             &.menu-header-search, &.menu-header-search:hover, &.menu-header-search:focus {
-                background: $gray;
+                background: $white;
             }
         }
 
@@ -338,6 +338,7 @@
     h1 {
         max-width: map-get($breakpoints,sm);
         margin: 0 auto;
+        color: $light;
     }
     p {
         max-width: map-get($breakpoints,sm);

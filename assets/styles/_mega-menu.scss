@@ -246,11 +246,11 @@
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
   font-weight: $normal;
-  color: $white;
+  color: $dark;
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
-    color: $white;
+    color: $dark;
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
@@ -259,7 +259,7 @@
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
-    color: $white;
+    color: $dark;
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
@@ -270,12 +270,13 @@
   outline: none;
   text-decoration: none;
   padding: 1.5em 1em;
-  font-weight: $normal;
+  font-weight: $thin;
+  text-transform: uppercase;
   vertical-align: baseline;
   text-align: center;
   width: auto;
   display: block;
-  color: $white;
+  color: $dark;
   text-decoration: none;
   -webkit-border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
@@ -586,7 +587,7 @@
   box-shadow: 0 5px 20px rgba( $dark, 0.2 );
 }
 #mega-menu-wrap-primary ul#mega-menu-primary > li.mega-menu-item {
-    background-color: $gray;
+    background-color: $white;
     &:hover {
         background-color: rgba( $dark, .2 );
     }
@@ -751,7 +752,7 @@
   margin-left: 1rem;
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
-  color: $gray;
+  color: $dark;
   font-family: inherit;
   font-size: 1.4rem;
   display: block;
@@ -764,11 +765,12 @@
   clear: left;
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title {
-  color: $gray;
+  color: $dark;
   font-family: inherit;
   font-size: 1.6rem;
+  font-weight: $extra-thin;
   text-decoration: none;
-  font-family: $font-heading;
+  font-family: $font-body;
   text-align: center;
   margin: 0px 0px 1rem 0px;
   padding: 0px 0px .5rem 0px;
@@ -781,12 +783,12 @@
   border-bottom: 0px solid $gray;
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
-  color: $gray;
+  color: $dark;
   font-family: inherit;
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: $normal;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   vertical-align: top;

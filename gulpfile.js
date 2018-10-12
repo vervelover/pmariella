@@ -123,8 +123,8 @@ gulp.task('woo', function () {
 			stream: true
 		}))
 
-		// Notify on successful compile (uncomment for notifications).
-		.pipe(notify("Compiled: <%= file.relative %>"));
+		// // Notify on successful compile (uncomment for notifications).
+		// .pipe(notify("Compiled: <%= file.relative %>"));
 
 });
 
@@ -214,7 +214,7 @@ gulp.task('styles', function () {
 		.pipe(filter('**/*.css'))
 
 		// Notify on successful compile (uncomment for notifications).
-		.pipe(notify("Compiled: <%= file.relative %>"));
+		// .pipe(notify("Compiled: <%= file.relative %>"));
 
 });
 
@@ -252,7 +252,7 @@ gulp.task('scripts', function () {
 		}))
 
 		// Notify on successful compile.
-		.pipe(notify("Minified: <%= file.relative %>"));
+		// .pipe(notify("Minified: <%= file.relative %>"));
 
 });
 
@@ -287,7 +287,7 @@ gulp.task('images', function () {
 		}))
 
 		// Notify on successful compile.
-		.pipe(notify("Optimized: <%= file.relative %>"));
+		// .pipe(notify("Optimized: <%= file.relative %>"));
 
 });
 

@@ -74,10 +74,10 @@
             box-shadow: none;
         }
         >a>span {
-            background-color: $accent;
+            background-color: $white;
             padding: 1em 2em;
             border-radius: $site-radius;
-            color: $white;
+            color: $dark;
             margin-top: 1em;
             display: block;
             @include breakpoint(md) {
@@ -97,7 +97,7 @@
         font-weight: $bolder;
         display: inline-block;
         padding: 0.5em 0;
-        color: $light;
+        color: $dark;
         @include breakpoint(md) {
             padding: 1.5em 1em;
             width: 100%;
