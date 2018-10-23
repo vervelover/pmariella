@@ -18,6 +18,10 @@
             padding: 0;
         }
     }
+    &.shrink .nav-primary {
+        margin-top: 5rem;
+        transition: $site-transition;
+    }
     .page-template-page-builder & {
         position: relative;
         background-color: $dark;
@@ -28,13 +32,11 @@
     >.wrap {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
-        flex-direction: column;
         @include transition;
         @include breakpoint(md) {
-            padding: 1rem 0;
-            padding-bottom: 0;
+            padding: 0;
             flex-wrap: nowrap;
             position: relative;
         }
@@ -50,10 +52,7 @@
     position: relative;
     height: 100%;
     display: block;
-    margin: 0 auto;
-    flex: 1;
     padding: 2rem 0;
-    max-width: 15rem;
     .wp-custom-logo & {
         padding: 1rem 0;
         @include breakpoint(lg) {
@@ -125,8 +124,8 @@
             color: $dark;
             text-transform: capitalize;
             text-decoration: none;
-            font-weight: 400;
-            letter-spacing: 0;
+            font-weight: $thin;
+            letter-spacing: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -138,11 +137,13 @@
             justify-content: center;
             background: $white;
             & a {
-                padding: 1.5rem .6rem;
+                font-size: 1.2rem;
+                padding: .5rem .6rem;
             }
             &:hover,
             &:focus {
                 background-color: $white;
+                color: $black;
             }
             &.menu-header-search, &.menu-header-search:hover, &.menu-header-search:focus {
                 background: $white;
@@ -178,7 +179,7 @@
 .site-header .fa-shopping-cart {
     padding: 0;
     font-size: 2rem;
-    margin-top: -.4rem;
+    margin-top: -.1rem;
 }
 
 .header-cart-menu {
@@ -188,9 +189,9 @@
 .cart-count {
     font-family: $font-body;
     font-size: 1.1rem;
-    font-weight: $normal;
+    font-weight: $thin;
     background-color: transparent;
-    color: $white;
+    color: $dark;
     height: 14px;
     width: 14px;
     display: block;
@@ -210,59 +211,84 @@
 /* ## Product Search
 --------------------------------------------- */
 
-.product-search {
-
+.menu-header-search {
     display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    @include breakpoint(md) {
+        margin-left: auto;
+        width: 4rem;
+    }
 
-    &__input {
+    &.hidden {
+        display: none;
+    }
+    
+}
 
-        color: $light;
+.product-search, .search-form, .woocommerce-product-search {
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: auto;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+    z-index: 999;
+
+    input[type="search"] {
+        color: transparent;
+        // @include breakpoint(md) {
+        //     color: $medium;
+        // }
         background-color: transparent;
         border: none;
         border-radius: none;
         padding: 0;
-        width: 130px;
-        padding-left: 1rem;
+        width: 3rem;
+        cursor: pointer;
+        line-height: 4.2rem;
+        // @include breakpoint(md) {
+        //     width: 17rem;
+        //     cursor: auto;
+        // }
+        padding-left: 2em;
         transition: all .5s;
 
         &::placeholder {
-            color: $light;
+            color: transparent;
+            // @include breakpoint(md) {
+            //     color: $medium;
+            // }
         }
 
         @include breakpoint(md) {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         &:focus {
             color: $black;
-            padding: 0 1rem;
+            padding: 0;
+            padding-right: 0;
+            width: 100vw;
+           
+            @include breakpoint(md) {
+                width: auto;
+                padding-right: 30vw;
+            }
+            padding-left: 2em;
             border-radius: 100px;
-            width: 190px;
+            transition: all .5s;
             background-color: $light;
             &::placeholder {
+                text-indent: 0;
                 color: $gray;
             }
         }
 
-    }
-
-    &__input:focus + &__button {
-        margin-left: 0;
-    }
-
-    &__button {
-        padding: 0;
-        background-color: transparent;
-        margin-left: -1rem;
-        margin-top: .1rem;
-
-        &:hover {
-            box-shadow: none;
-        }
-    }
-
-    &__icon {
-        font-size: 1.6rem;
     }
 
 }
@@ -329,7 +355,7 @@
     position: relative;
     @include overlay;
     @include breakpoint(sm) {
-        padding: 20rem 0 10rem;
+        padding: 24rem 0 12rem;
     }
     .wrap {
         position: relative;

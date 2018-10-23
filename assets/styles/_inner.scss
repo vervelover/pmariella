@@ -339,3 +339,20 @@
         }
     }
 }
+
+// Pagina Contatti
+
+.contatti {
+	h4, h6 {
+		font-family: $font-body;
+	}
+	h4 {
+		margin-bottom: 2rem;
+	}
+	h6 {
+		font-weight: $normal;
+	}
+	.post-edit-link {
+		display: none;
+	}
+}

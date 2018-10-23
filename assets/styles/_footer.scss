@@ -101,10 +101,10 @@
     .widget-title {
         font-size: 1.6rem;
         font-family: $font-body;
-        font-weight: $thin;
+        font-weight: $normal;
         text-transform: uppercase;
         margin-bottom: 1.5em;
-        color: $white;
+        color: $accent;
     }
     .menu-item {
         width: 50%;
@@ -200,7 +200,7 @@
     padding: 6rem 0;
     background-color: $dark;
     color: $white;
-    @include overlay;
+    @include overlay-darker;
     @include breakpoint(sm) {
         padding: 10rem 0;
     }
@@ -255,7 +255,10 @@
     }
     .widget-title {
         font-size: 5rem;
+        font-family: $font-body;
         text-shadow: $heading-shadow;
+        font-weight: $thin;
+        color: $white;
     }
     p {
         margin-bottom: 0;
@@ -274,6 +277,8 @@
         }
         &.alignright {
             float: left;
+            text-transform: uppercase;
+            font-size: 1.7rem;
             @include breakpoint(sm) {
                 float: right;
             }

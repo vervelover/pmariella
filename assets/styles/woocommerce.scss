@@ -149,6 +149,7 @@
     }
     ul.products {
         margin: 0 auto;
+        width: 100%;
         max-width: map-get($breakpoints, lg);
         @include breakpoint(sm) {
             display: flex;
@@ -169,7 +170,7 @@
             box-shadow: none;
             text-align: center;
             background-color: $white;
-            box-shadow: 0 1rem 2rem -1rem rgba($dark,0.1);
+            box-shadow: 0 1rem 2rem -.6rem rgba($dark,0.2);
             padding-bottom: 2.5rem;
 
             @include breakpoint(sm) {
@@ -200,6 +201,10 @@
                 @include breakpoint(lg) {
                     padding: 1rem;
                 }
+            }
+            h2.woocommerce-loop-product__title {
+                font-family: $font-body;
+                font-weight: $thin;
             }
             h2,
             .price .from,
@@ -297,6 +302,15 @@
         .star-rating {
             float: left;
         }
+        .related.products {
+            width: 100%;
+            float: left;
+
+            h2 {
+                margin: 4rem 0 3rem;
+                text-align: center;
+            }
+        }
         .summary {
             p {
                 color: $gray;
@@ -321,8 +335,24 @@
         form.cart {
             clear: both;
             padding: 1em 0 0;
+            font-size: 1.5rem;
             .variations {
                 table-layout: fixed;
+                border-bottom: 0 !important;
+
+                tbody {
+                    border-bottom: 0 !important;
+                }
+                tr {
+                    display: flex;
+
+                    .reset_variations {
+                        display: none !important;
+                    }
+                }
+                select {
+                    font-size: 1.4rem;
+                }
             }
         }
     }
@@ -346,12 +376,16 @@
 
 .woocommerce div.product .woocommerce-tabs {
 
+    margin: 6rem auto;
+    padding-top: 3rem;
+
     h2 {
         display: none;
     }
 
     ul.tabs {
         padding-left: .5rem;
+        display: none;
         &::before {
             border: 1px solid $border;
         }
@@ -647,6 +681,9 @@
         &.alt {
             font-size: 1.4rem;
             background-color: $accent;
+            &.disabled {
+                background-color: $gray !important;
+            }
             &:hover {
                 background-color: $accent;
             }

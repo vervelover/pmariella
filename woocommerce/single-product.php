@@ -40,7 +40,7 @@ function ap_update_woo_flexslider_options( $options ) {
 	/* properties here: https://github.com/woocommerce/FlexSlider/wiki/FlexSlider-Properties */
     $options['directionNav'] = true;
     $options['touch'] = true;
-    $options['animation'] = "fade";
+    // $options['animation'] = "fade";
     $options['controlNav'] = true;
     $options['smoothHeight'] = true;
 

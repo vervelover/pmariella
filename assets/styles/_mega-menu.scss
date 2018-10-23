@@ -245,8 +245,7 @@
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
-  font-weight: $normal;
-  color: $dark;
+  text-decoration: underline;
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
@@ -254,8 +253,7 @@
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
-  font-weight: $bold;
-  text-decoration: none;
+  text-decoration: underline;
 }
 @media only screen and (max-width: 56em) {
   #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
@@ -574,7 +572,7 @@
   -ms-border-radius: 0px 0px 0px 0px;
   -o-border-radius: 0px 0px 0px 0px;
   border-radius: 0px 0px 0px 0px;
-  background: $light;
+  background: $white;
   padding: 1rem;
   position: absolute;
   width: 100%;
@@ -589,7 +587,7 @@
 #mega-menu-wrap-primary ul#mega-menu-primary > li.mega-menu-item {
     background-color: $white;
     &:hover {
-        background-color: rgba( $dark, .2 );
+        background-color: $white;
     }
 }
 @media only screen and (max-width: 56em) {
@@ -768,7 +766,7 @@
   color: $dark;
   font-family: inherit;
   font-size: 1.6rem;
-  font-weight: $extra-thin;
+  font-weight: $thin;
   text-decoration: none;
   font-family: $font-body;
   text-align: center;

@@ -39,6 +39,7 @@ $border:  #cecece;
 $light:   #f4f4f4;
 $white:   #ffffff;
 $overlay: rgba(0, 0, 0, 0.1);
+$overlay-darker: rgba(0, 0, 0, 0.3);
 
 /* ### Typography */
 
@@ -145,6 +146,21 @@ $woocommerce-columns: $one-third;
 		right: 0;
 		bottom: 0;
 		background-color: $overlay;
+		z-index: 1;
+		pointer-events: none;
+	}
+}
+@mixin overlay-darker {
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $overlay-darker;
 		z-index: 1;
 		pointer-events: none;
 	}
