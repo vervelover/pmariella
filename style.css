@@ -693,8 +693,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Old Standard TT', serif;
-	font-weight: 700;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 0.382em;
 	color: #544d3e;
@@ -1313,7 +1313,7 @@ img.alignright,
 .site-title {
 	font-size: 17px;
 	font-size: 1.7rem;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	line-height: 1;
 	margin-bottom: 0;
@@ -1385,7 +1385,7 @@ img.alignright,
 	background-color: transparent;
 	color: #181307;
 	height: 14px;
-	width: 14px;
+	width: 16px;
 	display: block;
 	text-align: center;
 	position: absolute;
@@ -1727,6 +1727,17 @@ img.alignright,
 #mega-menu-wrap-primary #mega-menu-primary.mega-no-js li.mega-menu-item:focus > ul.mega-sub-menu,
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-toggle-on > ul.mega-sub-menu {
 	visibility: visible;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	-ms-flex-align: end;
+	        align-items: flex-end;
 }
 
 #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu {
@@ -2749,7 +2760,7 @@ img.alignright,
 p.entry-meta {
 	font-size: 12px;
 	font-size: 1.2rem;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 }
 
@@ -2812,7 +2823,7 @@ p.entry-meta {
 	padding: 40px 0;
 	padding: 4rem 0;
 	background-color: #f4f4f4;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 14px;
 	font-size: 1.4rem;
 	font-weight: 700;
@@ -3006,7 +3017,7 @@ p.entry-meta {
 
 .widgettitle,
 .widget-title {
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 24px;
 	font-size: 2.4rem;
 }
@@ -3129,6 +3140,11 @@ p.entry-meta {
 
 .footer-widgets .widget-area .widget:last-of-type {
 	margin-bottom: 0;
+}
+
+.footer-widgets .widget-area .widget_media_image {
+	max-width: 200px;
+	margin-left: 0;
 }
 
 .footer-widgets .widget-title {
@@ -3812,6 +3828,13 @@ a.flex-prev::before {
 	margin-bottom: 3rem;
 }
 
+.front-page-1 .button.accent {
+	font-size: 15px;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
 /* ### Front Page 2 */
 .front-page-2 {
 	text-align: center;
@@ -3842,6 +3865,14 @@ a.flex-prev::before {
 /* ### Front Page 3 */
 .front-page-3 {
 	background-color: #f4f4f4;
+	text-align: center;
+}
+
+.front-page-3 h2.section-title {
+	font-size: 45px;
+	font-size: 4.5rem;
+	margin-bottom: 100px;
+	margin-bottom: 10rem;
 }
 
 .front-page-3 .wrap {
@@ -3857,6 +3888,19 @@ a.flex-prev::before {
 .front-page-3 .widget:first-of-type {
 	margin-bottom: 50px;
 	margin-bottom: 5rem;
+}
+
+.front-page-3 .widget img {
+	border-radius: 3rem;
+	padding: 20px;
+	padding: 2rem;
+}
+
+.front-page-3 h3.widget-title {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 .front-page-3 .widget_custom_html:first-of-type {
@@ -3944,6 +3988,7 @@ a.flex-prev::before {
 	padding: 3rem 3rem 0;
 	font-size: 18px;
 	font-size: 1.8rem;
+	font-family: 'Lato', sans-serif;
 }
 
 .front-page-3 .entry-content {
@@ -3964,7 +4009,7 @@ a.flex-prev::before {
 	padding: 0.618em 1.618em;
 	font-size: 14px;
 	font-size: 1.4rem;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	margin-top: 1em;
 	width: auto;
@@ -4236,7 +4281,7 @@ a.flex-prev::before {
 }
 
 .front-page-5 .title {
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	position: absolute;
 	text-align: center;
@@ -4404,7 +4449,7 @@ a.flex-prev::before {
 .archive.genesis-pro-portfolio .entry .entry-title {
 	text-align: center;
 	position: absolute;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -4514,7 +4559,7 @@ a.flex-prev::before {
 	text-transform: capitalize;
 	font-size: 14px;
 	font-size: 1.4rem;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	padding: 2em 0;
 	color: #544d3e;
@@ -4661,7 +4706,7 @@ a.flex-prev::before {
 	font-size: 1.618em;
 	color: #181307;
 	font-weight: 700;
-	font-family: 'Old Standard TT', serif;
+	font-family: 'Playfair Display', serif;
 }
 
 .pricing-table p {

@@ -51,7 +51,21 @@ function ap_update_woo_flexslider_options( $options ) {
 
 add_action('woocommerce_share', 'ap_add_social_buttons' );
 function ap_add_social_buttons() {
-    genesis_share_icon_output( 'header', array(  'facebook', 'googlePlus', 'pinterest' ) );
+    genesis_share_icon_output( 'header', array(  'facebook', 'pinterest' ) );
+}
+
+/**
+ * Remove product data tabs
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['description'] );      	// Remove the description tab
+    unset( $tabs['reviews'] ); 			// Remove the reviews tab
+    unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+    return $tabs;
 }
 
 add_action( 'genesis_loop', 'gencwooc_single_product_loop' );

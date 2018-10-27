@@ -39,14 +39,14 @@ function ap_contatti_content() {
 		<h4>Inviaci un messaggio</h4>
 		<?php echo do_shortcode('[contact-form-7 id="5" title="Modulo di contatto 1"]') ?>
 	</div>
-	<?php 
+	<?php
 }
 
 add_action( 'genesis_after_content_sidebar_wrap', 'ap_google_maps_embed');
 function ap_google_maps_embed() {
 	?>
 	<iframe style="margin:0 auto;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.1278840527343!2d11.075131315426606!3d43.853177979114825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a58ae7a84af81%3A0x7db29a44334cdd9b!2sPasticceria+Mariella!5e0!3m2!1sit!2sit!4v1540029344811" width="1920" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-	<?php 
+	<?php
 }
 
 // Run the Genesis loop

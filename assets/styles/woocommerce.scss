@@ -307,7 +307,7 @@
             float: left;
 
             h2 {
-                margin: 4rem 0 3rem;
+                margin: 5rem 0 4rem;
                 text-align: center;
             }
         }
@@ -319,7 +319,8 @@
         }
         p.price,
         span.price {
-            font-family: $font-heading;
+            font-family: $font-body;
+            font-weight: $thin;
             font-size: 2em;
             margin-bottom: 1rem;
             color: $accent;
@@ -368,6 +369,7 @@
     }
     .woocommerce-product-details__short-description {
         @include clearfix;
+        font-size: 1.4rem;
     }
 }
 

@@ -22,7 +22,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 // Define theme constants.
 define( 'CHILD_THEME_NAME', 'Business Pro Theme' );
 define( 'CHILD_THEME_URL', 'https://seothemes.com/themes/business-pro' );
-define( 'CHILD_THEME_VERSION', '1.0.5a20180611a02' );
+define( 'CHILD_THEME_VERSION', '1.0.5a20180611a06' );
 
 // Set Localization (do not remove).
 load_child_theme_textdomain( 'business-pro-theme', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'business-pro-theme' ) );
@@ -40,7 +40,7 @@ add_filter( 'widget_text', 'do_shortcode' );
 add_image_size( 'hero', 1280, 720, true );
 
 // Set portfolio image size to override plugin.
-add_image_size( 'portfolio', 620, 380, true );
+// add_image_size( 'portfolio', 620, 380, true );
 
 // Enable support for page excerpts.
 add_post_type_support( 'page', 'excerpt' );
@@ -191,7 +191,7 @@ function business_scripts_styles() {
 	wp_dequeue_style( 'woocommerce-layout' );
 
 	// Enqueue Google fonts.
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,700|Old+Standard+TT:400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,700|Playfair+Display:400,700', array(), CHILD_THEME_VERSION );
 
 	// Get Icon Widget plugin settings.
 	$icon_settings = get_option( 'icon_widget_settings' );
@@ -356,3 +356,6 @@ function ap_hide_admin_bar() {
   		add_filter( 'show_admin_bar', '__return_false', PHP_INT_MAX );
 	}
 }
+
+//* Remove the edit link
+add_filter ( 'genesis_edit_post_link' , '__return_false' );

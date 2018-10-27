@@ -193,7 +193,7 @@
     background-color: transparent;
     color: $dark;
     height: 14px;
-    width: 14px;
+    width: 16px;
     display: block;
     text-align: center;
     position: absolute;
@@ -215,7 +215,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
- 
+
     @include breakpoint(md) {
         margin-left: auto;
         width: 4rem;
@@ -224,7 +224,7 @@
     &.hidden {
         display: none;
     }
-    
+
 }
 
 .product-search, .search-form, .woocommerce-product-search {
@@ -274,7 +274,7 @@
             padding: 0;
             padding-right: 0;
             width: 100vw;
-           
+
             @include breakpoint(md) {
                 width: auto;
                 padding-right: 30vw;

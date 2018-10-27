@@ -75,6 +75,11 @@
             font-size: 3.5em;
         }
     }
+    .button.accent {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 }
 
 
@@ -112,6 +117,11 @@
 
 .front-page-3 {
     background-color: $light;
+    text-align: center;
+    h2.section-title {
+        font-size: 4.5rem;
+        margin-bottom: 10rem;
+    }
     .wrap {
         flex-wrap: wrap;
     }
@@ -123,6 +133,15 @@
         &:first-of-type {
             margin-bottom: 5rem;
         }
+        img {
+            border-radius: 3rem;
+            padding: 2rem;
+        }
+    }
+    h3.widget-title {
+        font-family: $font-body;
+        font-weight: $thin;
+        margin-bottom: 3rem;
     }
     .widget_custom_html:first-of-type {
         text-align: center;
@@ -174,6 +193,7 @@
     .entry-title {
         padding: 3rem 3rem 0;
         font-size: 1.8rem;
+        font-family: $font-body;
     }
     .entry-content {
         padding: 0 3rem 3rem;
