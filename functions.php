@@ -22,7 +22,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 // Define theme constants.
 define( 'CHILD_THEME_NAME', 'Business Pro Theme' );
 define( 'CHILD_THEME_URL', 'https://seothemes.com/themes/business-pro' );
-define( 'CHILD_THEME_VERSION', '1.0.5a20180611a06' );
+define( 'CHILD_THEME_VERSION', '1.0.5a20180611a16' );
 
 // Set Localization (do not remove).
 load_child_theme_textdomain( 'business-pro-theme', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'business-pro-theme' ) );
@@ -249,6 +249,9 @@ include_once( get_stylesheet_directory() . '/includes/customize.php' );
 include_once( get_stylesheet_directory() . '/includes/defaults.php' );
 
 // Load theme's recommended plugins.
+include_once( get_stylesheet_directory() . '/includes/flexslider.php' );
+
+// Load theme's recommended plugins.
 include_once( get_stylesheet_directory() . '/includes/plugins.php' );
 
 // Modify woocommerce smallscreen breakpoint
@@ -359,3 +362,39 @@ function ap_hide_admin_bar() {
 
 //* Remove the edit link
 add_filter ( 'genesis_edit_post_link' , '__return_false' );
+
+/**
+ * Change number of related products output
+ */ 
+function woo_related_products_limit() {
+  global $product;
+	
+	$args['posts_per_page'] = 3;
+	return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+  function jk_related_products_args( $args ) {
+	$args['posts_per_page'] = 3; // 4 related products
+	$args['columns'] = 3; // arranged in 2 columns
+	return $args;
+}
+
+// Spedizione solo su Prato
+add_filter( 'woocommerce_checkout_fields', 'custom_checkout_fields', 10, 1 );
+function custom_checkout_fields( $fields ) {
+
+    $fields['billing']['billing_city']['type'] = 'select';
+    $fields['billing']['billing_city']['options'] = array('Prato' => 'Prato');
+    $fields['billing']['billing_postcode']['type'] = 'select';
+    $fields['billing']['billing_postcode']['options'] = array('59100' => '59100');
+    $fields['billing']['billing_state']['type'] = 'select';
+    $fields['billing']['billing_state']['options'] = array('Prato' => 'Prato');
+    $fields['shipping']['shipping_city']['type'] = 'select';
+    $fields['shipping']['shipping_city']['options'] = array('Prato' => 'Prato');
+    $fields['shipping']['shipping_postcode']['type'] = 'select';
+    $fields['shipping']['shipping_postcode']['options'] = array('59100' => '59100');
+    $fields['shipping']['shipping_state']['type'] = 'select';
+    $fields['shipping']['shipping_state']['options'] = array('Prato' => 'Prato');
+
+    return $fields;
+}

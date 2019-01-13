@@ -1,0 +1,32 @@
+
+.gallery-filter {
+	color: $gray;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $font-heading;
+	font-weight: $thin;
+	font-size: 1.8rem;
+	margin-top: 1rem;
+
+	&.active {
+		font-weight: $bold;
+		text-decoration: underline;
+	}
+
+	&__cioccolata-filter,
+	&__torte-filter,
+	&__festivita-filter {
+		padding-right: 2rem;
+		border-right: 2px solid $dark;
+		cursor: pointer;
+	}
+	&__festivita-filter,
+	&__torte-filter {
+		padding-left: 2rem;
+	}
+	&__pasticceria-tradizionale-filter {
+		padding-left: 2rem;
+		cursor: pointer;
+	}
+}

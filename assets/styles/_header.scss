@@ -19,8 +19,10 @@
         }
     }
     &.shrink .nav-primary {
-        margin-top: 5rem;
         transition: $site-transition;
+        @include breakpoint(md) {
+            margin-top: 5rem;
+        }
     }
     .page-template-page-builder & {
         position: relative;

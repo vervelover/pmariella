@@ -138,10 +138,17 @@
             padding: 2rem;
         }
     }
+    .widget-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
     h3.widget-title {
         font-family: $font-body;
         font-weight: $thin;
         margin-bottom: 3rem;
+        height: 50px;
     }
     .widget_custom_html:first-of-type {
         text-align: center;

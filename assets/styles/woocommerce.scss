@@ -259,10 +259,13 @@
         }
     }
     .woocommerce-pagination {
+        margin: 3rem auto 2rem;
+        
         .page-numbers {
             border: none;
             font-family: $font-heading;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+
             li {
                 display: inline;
                 border: none;
@@ -271,12 +274,10 @@
             li span {
                 cursor: pointer;
                 display: inline-block;
-                padding: 0.7rem;
+                padding: 1.5rem 2.5rem;
                 text-decoration: none;
                 border-radius: $site-radius;
                 margin: 0 0.1em;
-                width: 3rem;
-                height: 3rem;
             }
             li a {
                 margin-bottom: 4px;
@@ -343,6 +344,8 @@
 
                 tbody {
                     border-bottom: 0 !important;
+                    display: flex;
+                    flex-wrap: wrap;
                 }
                 tr {
                     display: flex;
@@ -380,6 +383,13 @@
 
     margin: 6rem auto;
     padding-top: 3rem;
+    margin-bottom: 0;
+
+    .panel {
+        border-bottom: 1px solid $accent;
+        margin-bottom: 0;
+        padding-bottom: 2em;
+    }
 
     h2 {
         display: none;

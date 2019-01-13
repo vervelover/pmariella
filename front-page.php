@@ -72,22 +72,22 @@ if ( is_active_sidebar( 'front-page-1' ) ||
 		) );
 
 		// Front page 4 widget area.
-		genesis_widget_area( 'front-page-4', array(
-			'before' => '<div class="front-page-4 widget-area"><div class="wrap">',
-			'after'  => '</div></div>',
-		) );
+		// genesis_widget_area( 'front-page-4', array(
+		// 	'before' => '<div class="front-page-4 widget-area"><div class="wrap">',
+		// 	'after'  => '</div></div>',
+		// ) );
 
 		// Front page 5 widget area.
-		genesis_widget_area( 'front-page-5', array(
-			'before' => '<div class="front-page-5 widget-area"><div class="wrap">',
-			'after'  => '</div></div>',
-		) );
+		// genesis_widget_area( 'front-page-5', array(
+		// 	'before' => '<div class="front-page-5 widget-area"><div class="wrap">',
+		// 	'after'  => '</div></div>',
+		// ) );
 
 		// Front page 6 widget area.
-		genesis_widget_area( 'front-page-6', array(
-			'before' => '<div class="front-page-6 widget-area"><div class="wrap">',
-			'after'  => '</div></div>',
-		) );
+		// genesis_widget_area( 'front-page-6', array(
+		// 	'before' => '<div class="front-page-6 widget-area"><div class="wrap">',
+		// 	'after'  => '</div></div>',
+		// ) );
 	}
 }
 // Run Genesis.

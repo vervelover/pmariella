@@ -34,9 +34,9 @@ a.flex-next::after {
     font-family: dashicons;
     color: $gray;
     margin-right: .5rem;
-    font-size: 4rem;
+    font-size: 3rem;
     @include breakpoint(sm) {
-        font-size: 7rem;
+        font-size: 4rem;
     }
 }
 a.flex-prev::before {
@@ -45,9 +45,9 @@ a.flex-prev::before {
     font-family: dashicons;
     color: $gray;
     margin-left: .5rem;
-    font-size: 4rem;
+    font-size: 3rem;
     @include breakpoint(sm) {
-        font-size: 7rem;
+        font-size: 4rem;
     }
 }
 
@@ -89,3 +89,16 @@ a.flex-prev::before {
 // .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
 // .flex-control-thumbs img:hover {opacity: 1;}
 // .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+.slider-container {
+    width: 100%;
+    margin: 6rem 0 18rem !important;
+
+    ol > li {
+        list-style-type: none !important;
+    }
+
+    ul > li {
+        list-style-type: none !important;
+    }
+}

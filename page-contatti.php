@@ -27,7 +27,8 @@ add_action('genesis_entry_content', 'ap_contatti_content');
 function ap_contatti_content() {
 	?>
 	<div class="one-half first">
-		<h4>Contattaci</h4>
+		<?php genesis_widget_area('sidebar'); ?>
+		<h4 style="margin-top:3rem;">Contattaci</h4>
 		<h6>Indirizzo:</h6>
 		<p>Via Roma, 480, 59100 Prato PO</p>
 		<h6>Telefono / Fax:</h6>

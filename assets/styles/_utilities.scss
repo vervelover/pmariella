@@ -43,7 +43,8 @@ $overlay-darker: rgba(0, 0, 0, 0.3);
 
 /* ### Typography */
 
-$font-heading: 'Playfair Display', serif;
+// $font-heading: 'Playfair Display', serif;
+$font-heading: 'Lato', sans-serif;
 $font-body:    'Lato', sans-serif;
 $extra-thin:   100;
 $thin:		   300;
@@ -67,6 +68,9 @@ $one-third:     calc((100% - 2 * #{$margin-left}) / 3);
 $one-fourth:    calc((100% - 3 * #{$margin-left}) / 4);
 $one-fifth:     calc((100% - 4 * #{$margin-left}) / 5);
 $one-sixth:     calc((100% - 5 * #{$margin-left}) / 6);
+$one-seventh:   calc((100% - 6 * #{$margin-left}) / 7);
+$one-eighth:    calc((100% - 7 * #{$margin-left}) / 8);
+$one-ninth:     calc((100% - 8 * #{$margin-left}) / 9);
 $two-thirds:    calc(2 * ((100% - 2 * #{$margin-left}) / 3) + #{$margin-left});
 $two-fifths:    calc(2 * ((100% - 4 * #{$margin-left}) / 5) + #{$margin-left});
 $three-fourths: calc(3 * ((100% - 3 * #{$margin-left}) / 4) + 2 * #{$margin-left});
