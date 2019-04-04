@@ -170,7 +170,7 @@ function business_page_excerpt() {
 
 	if ( class_exists( 'WooCommerce' ) && is_shop() ) {
 
-		woocommerce_result_count();
+		/*woocommerce_result_count();*/
 
 	} elseif ( is_home() ) {
 

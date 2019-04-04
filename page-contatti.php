@@ -27,14 +27,15 @@ add_action('genesis_entry_content', 'ap_contatti_content');
 function ap_contatti_content() {
 	?>
 	<div class="one-half first">
-		<?php genesis_widget_area('sidebar'); ?>
-		<h4 style="margin-top:3rem;">Contattaci</h4>
+		<h4>Contattaci</h4>
 		<h6>Indirizzo:</h6>
 		<p>Via Roma, 480, 59100 Prato PO</p>
 		<h6>Telefono / Fax:</h6>
 		<p>0574 635722</p>
 		<h6>Orario di apertura:</h6>
 		<p>Lun - Dom 05:00/20:30</p>
+		<p></p>
+		<?php genesis_widget_area('sidebar'); ?>
 	</div>
 	<div class="one-half">
 		<h4>Inviaci un messaggio</h4>
